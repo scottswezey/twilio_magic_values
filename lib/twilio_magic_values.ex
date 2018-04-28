@@ -1,18 +1,9 @@
 defmodule TwilioMagicValues do
   @moduledoc """
-  Documentation for TwilioMagicValues.
+  This is an elixir wrapper for magic values provided by Twilio. See https://www.twilio.com/docs/iam/test-credentials
   """
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> TwilioMagicValues.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def error_info_url(code) do
+    "https://www.twilio.com/docs/errors/#{code}"
   end
 end
