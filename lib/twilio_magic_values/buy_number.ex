@@ -31,6 +31,7 @@ defmodule TwilioMagicValues.BuyNumber do
   Expect the 21452 API error from Twilio.
   """
   def empty_area_code, do: "533"
+
   @doc """
   Returns the magic area code which has numbers available for purchase.
 
