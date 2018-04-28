@@ -18,6 +18,7 @@ defmodule TwilioMagicValues do
 
   """
   def error_info_url(integer)
+
   def error_info_url(code) do
     "https://www.twilio.com/docs/errors/#{code}"
   end
