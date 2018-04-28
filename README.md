@@ -4,11 +4,7 @@
 
 The goal of this project is to provide simple pragmatic access to these for elixir apps.
 
-## Ignore everything after this for the time being.
-
----
-
-~## Installation
+<!-- ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `twilio_magic_values` to your list of dependencies in `mix.exs`:
@@ -23,4 +19,4 @@ end
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/twilio_magic_values](https://hexdocs.pm/twilio_magic_values).~
+be found at [https://hexdocs.pm/twilio_magic_values](https://hexdocs.pm/twilio_magic_values). -->
