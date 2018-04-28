@@ -19,6 +19,7 @@ defmodule TwilioMagicNumbers.Call do
   def from_valid, do: "+15005550006"
   @doc """
   All other phone numbers, even ones owned by your production credentials, will return an error when used to call from.
+
   (Other numbers are not verified on your test credentials.)
 
   Expect the 21210 API error from Twilio.
