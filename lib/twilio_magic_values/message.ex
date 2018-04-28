@@ -1,4 +1,4 @@
-defmodule TwilioMagicNumbers.Message do
+defmodule TwilioMagicValues.Message do
   @moduledoc """
   For tests sending SMS messages with Twilio.
 

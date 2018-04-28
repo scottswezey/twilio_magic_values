@@ -1,4 +1,4 @@
-defmodule TwilioMagicNumbers.Call do
+defmodule TwilioMagicValues.Call do
   @moduledoc """
   For tests making calls with Twilio.
 
