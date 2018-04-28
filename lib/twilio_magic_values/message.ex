@@ -1,5 +1,6 @@
 defmodule TwilioMagicNumbers.Message do
   # Error docs @ https://www.twilio.com/docs/errors/#{error}
+  # https://www.twilio.com/docs/iam/test-credentials#test-sms-messages
 
   def from_invalid,   do: "+15005550001" # Error: 21212
   def from_unowned,   do: "+15005550007" # Error: 21606

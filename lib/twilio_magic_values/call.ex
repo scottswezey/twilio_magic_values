@@ -1,5 +1,6 @@
 defmodule TwilioMagicNumbers.Call do
   # Error docs @ https://www.twilio.com/docs/errors/#{error}
+  # https://www.twilio.com/docs/iam/test-credentials#test-calls
 
   def from_invalid, do: "+15005550001" # Error 21212
   def from_valid,   do: "+15005550006"
