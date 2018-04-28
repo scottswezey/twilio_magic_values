@@ -58,7 +58,7 @@ defmodule TwilioMagicValues.Call do
   def to_blacklisted, do: "+15005550004"
 
   @doc """
-  All other phone numbers are potentially valid and subject to verified normally.
+  All other phone numbers are potentially valid and are verified normally.
 
   Errors are dependent on input.
   """
