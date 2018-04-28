@@ -1,31 +1,32 @@
 # Twilio Magic Values
 
-[Twilio](https://www.twilio.com) provides magic values for use in testing. Details at: https://www.twilio.com/docs/iam/test-credentials
-
-The goal of this project is to provide simple pragmatic access to these for elixir apps.
+Provide elixir apps with simple, pragmatic access to [magic testing values](https://www.twilio.com/docs/iam/test-credentials) for [Twilio](https://www.twilio.com).
 
 ## Usage
 
-1. Require this dep in your `mix.exs`, then `mix deps.get`
-1. There is **NO** need to include this as an application or extra_application.
+1. Require this dep in your `mix.exs`, then run `mix deps.get`.
+1. There is **NO** need to include this as in `applications` or `extra_applications`.
 1. Use the provided modules and functions in your test code.
 
 ### Example:
 
-- `TwilioMagicValues.Message.to_blacklisted`
-- `TwilioMagicValues.Call.from_invalid`
-- `TwilioMagicValues.BuyNumber.unavailable`
+- `TwilioMagicValues.Message.to_blacklisted()`
+- `TwilioMagicValues.Call.from_invalid()`
+- `TwilioMagicValues.BuyNumber.unavailable()`
 
+## Other resources
+- https://www.twilio.com/docs/iam/test-credentials
+- https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html
 ---
 
 ## License
-GPL v3; See `LICENSE` file
+GPL v3; See `LICENSE` file.
 
 ## Author
-Written by Scott Swezey.
+Written by [Scott Swezey](https://github.com/scottswezey).
 
 ## Issues and Pull Requests
-Issues and pull requests are welcome on Github.
+Issues and pull requests are welcome on [Github](https://github.com/scottswezey/twilio_magic_values).
 
 <!-- ## Installation
 
