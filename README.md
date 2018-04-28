@@ -17,6 +17,11 @@ Provide elixir apps with simple, pragmatic access to [magic testing values](http
 ## Other resources
 - https://www.twilio.com/docs/iam/test-credentials
 - https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html
+
+## Other useful Twilio projects in Elixir
+- https://github.com/danielberkompas/ex_twilio
+- https://github.com/danielberkompas/telephonist
+- https://github.com/danielberkompas/ex_twiml
 ---
 
 ## License
