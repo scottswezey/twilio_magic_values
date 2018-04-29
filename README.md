@@ -1,10 +1,10 @@
 # Twilio Magic Values
 
-Provide elixir apps with simple, pragmatic access to [magic testing values](https://www.twilio.com/docs/iam/test-credentials) for [Twilio](https://www.twilio.com).
+Provide elixir apps with simple, pragmatic access to [magic testing values](https://www.twilio.com/docs/iam/test-credentials) for the [Twilio](https://www.twilio.com) API.
 
 ## Usage
 
-- Require this dep in your `mix.exs`, then run `mix deps.get`.
+- Require this in your `mix.exs` deps.
 ```elixir
 def deps do
   [
@@ -12,6 +12,7 @@ def deps do
   ]
 end
 ```
+- Run `mix deps.get`.
 - There is **NO** need to include this as in `applications` or `extra_applications`.
 - Use the provided modules and functions in your test code.
 
