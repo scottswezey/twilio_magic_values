@@ -7,6 +7,7 @@ defmodule TwilioMagicValuesTest do
     assert TwilioMagicValues.error_info_url("example") ==
              "https://www.twilio.com/docs/errors/example"
 
-    assert TwilioMagicValues.error_info_url("test") == "https://www.twilio.com/docs/errors/test"
+    assert TwilioMagicValues.error_info_url("example2") ==
+             "https://www.twilio.com/docs/errors/example2"
   end
 end
