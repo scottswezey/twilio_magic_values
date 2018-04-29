@@ -25,14 +25,17 @@ Provide elixir apps with simple, pragmatic access to [magic testing values](http
 - [https://github.com/danielberkompas/ex_twiml](https://github.com/danielberkompas/ex_twiml)
 ---
 
+## Contributing
+- Issues and pull requests are welcome on [Github](https://github.com/scottswezey/twilio_magic_values).
+- Please run `mix format` before committing.
+- Ensure tests pass before committing. You will need to copy `config/test.secret.exs.sample` to `config/test.secret.exs` and add your own [testing credentials](https://www.twilio.com/console/account/settings) from Twilio.
+
 ## License
 GPL v3; See `LICENSE` file.
 
-## Author
+## Author and Major Contributors
 Written by [Scott Swezey](https://github.com/scottswezey).
 
-## Issues and Pull Requests
-Issues and pull requests are welcome on [Github](https://github.com/scottswezey/twilio_magic_values).
 
 <!-- ## Installation
 
