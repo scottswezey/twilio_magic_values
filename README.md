@@ -1,6 +1,6 @@
 # Twilio Magic Values
 
-Provide elixir apps with simple, pragmatic access to [magic testing values](https://www.twilio.com/docs/iam/test-credentials) for the [Twilio](https://www.twilio.com) API.
+Provide elixir apps with simple, pragmatic access to [magic testing values](https://www.twilio.com/docs/iam/test-credentials) for the [Twilio](https://www.twilio.com) API. The module and method names help give you code that is easier to read and is less prone to typos. Automated tests in this project also ensure that you will know if the magic numbers ever change.
 
 ## Installation
 
@@ -15,6 +15,8 @@ def deps do
   ]
 end
 ```
+- This project is only needed for the `test` environment.
+- After version `1.0.0`, the project will follow [SEMVER](https://semver.org) 2.0.
 - Don't forget to run `mix deps.get`.
 
 ## Usage
@@ -24,9 +26,9 @@ end
 
 ### Examples:
 
-- Instead of `+15005550004`, use: `TwilioMagicValues.Message.to_blacklisted()`
-- Instead of `+15005550001`, use: `TwilioMagicValues.Call.from_invalid()`
-- Instead of `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable()`
+- Instead of testing sending a message to `+15005550004`, use: `TwilioMagicValues.Message.to_blacklisted()`
+- Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Call.from_invalid()`
+- Instead of trying to purchase `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable()`
 
 <!-- Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
@@ -50,6 +52,7 @@ be found at [https://hexdocs.pm/twilio_magic_values](https://hexdocs.pm/twilio_m
 - Issues and pull requests are welcome on [Github](https://github.com/scottswezey/twilio_magic_values).
 - Please run `mix format` before committing.
 - Ensure tests pass before committing. You will need to copy `config/test.secret.exs.sample` to `config/test.secret.exs` and add your own [testing credentials](https://www.twilio.com/console/account/settings) from Twilio.
+- Do not bump the version number in your pull requests.
 
 ## License
 GPL v3; See `LICENSE` file.
