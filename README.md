@@ -4,7 +4,7 @@ Provide elixir apps with simple, pragmatic access to [magic testing values](http
 
 ## Usage
 
-1. Require this dep in your `mix.exs`, then run `mix deps.get`.
+- Require this dep in your `mix.exs`, then run `mix deps.get`.
 ```elixir
 def deps do
   [
@@ -12,8 +12,8 @@ def deps do
   ]
 end
 ```
-1. There is **NO** need to include this as in `applications` or `extra_applications`.
-1. Use the provided modules and functions in your test code.
+- There is **NO** need to include this as in `applications` or `extra_applications`.
+- Use the provided modules and functions in your test code.
 
 ### Example:
 
