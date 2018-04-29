@@ -5,6 +5,13 @@ Provide elixir apps with simple, pragmatic access to [magic testing values](http
 ## Usage
 
 1. Require this dep in your `mix.exs`, then run `mix deps.get`.
+```elixir
+def deps do
+  [
+    {:twilio_magic_values, git: "git://github.com/scottswezey/twilio_magic_values.git"}
+  ]
+end
+```
 1. There is **NO** need to include this as in `applications` or `extra_applications`.
 1. Use the provided modules and functions in your test code.
 
@@ -46,7 +53,7 @@ by adding `twilio_magic_values` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:twilio_magic_values, "~> 0.1.0"}
+    {:twilio_magic_values, "~> 0.1.1"}
   ]
 end
 ```
