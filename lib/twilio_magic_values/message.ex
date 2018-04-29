@@ -1,6 +1,6 @@
 defmodule TwilioMagicValues.Message do
   @moduledoc """
-  For tests sending SMS messages with Twilio.
+  Wrapper for Twilio magic phone numbers used in tests sending SMS messages.
 
   See: [https://www.twilio.com/docs/iam/test-credentials#test-sms-messages](https://www.twilio.com/docs/iam/test-credentials#test-sms-messages)
   """

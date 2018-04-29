@@ -1,6 +1,6 @@
 defmodule TwilioMagicValues.Call do
   @moduledoc """
-  For tests making calls with Twilio.
+  Wrapper for Twilio magic phone numbers used in tests making calls.
 
   See: [https://www.twilio.com/docs/iam/test-credentials#test-calls](https://www.twilio.com/docs/iam/test-credentials#test-calls)
   """

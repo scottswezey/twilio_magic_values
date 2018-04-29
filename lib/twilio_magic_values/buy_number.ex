@@ -1,6 +1,6 @@
 defmodule TwilioMagicValues.BuyNumber do
   @moduledoc """
-  For tests buying a phone number with Twilio.
+  Wrapper for Twilio magic phone numbers used in tests buying phone numbers.
 
   See: [https://www.twilio.com/docs/iam/test-credentials#test-incoming-phone-numbers](https://www.twilio.com/docs/iam/test-credentials#test-incoming-phone-numbers)
   """

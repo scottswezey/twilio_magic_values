@@ -1,9 +1,5 @@
 defmodule TwilioMagicValues do
-  @moduledoc """
-  Elixir wrapper for magic values provided by Twilio.
-
-  See [https://www.twilio.com/docs/iam/test-credentials](https://www.twilio.com/docs/iam/test-credentials)
-  """
+  @moduledoc false
 
   @doc """
   Helper; Returns a URL to the Twilio documentation for a specific error code.
