@@ -27,13 +27,8 @@ end
 - Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Call.from_invalid()`.
 - Instead of trying to purchase `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable()`.
 
-<!-- Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/twilio_magic_values](https://hexdocs.pm/twilio_magic_values). -->
-
-
 ## Resources
-- Run `mix docs` to generate docs for this project. They will be published online when the project is posted on Hex. <strike>Docs may eventually be found at [https://hexdocs.pm/twilio_magic_values](https://hexdocs.pm/twilio_magic_values).</strike>
+- Docs are available at: [https://scottswezey.github.io/twilio_magic_values](https://scottswezey.github.io/twilio_magic_values). The Docs will be moved to Hexdocs when the project is posted on Hex.
 - The Twilio docs for test credentials and magic phone numbers: [https://www.twilio.com/docs/iam/test-credentials](https://www.twilio.com/docs/iam/test-credentials)
 - A Twilio authored blog post concerning test credentials and magic phone numbers: [https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html](https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html)
 
