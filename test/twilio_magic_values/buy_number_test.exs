@@ -6,41 +6,41 @@ defmodule TwilioMagicValues.BuyNumberTest do
   # POST https://api.twilio.com/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers
 
   test "unavailable" do
-    results = post(phone_number: Magic.unavailable())
+    results = buy_number(exactly: Magic.unavailable())
 
     assert results.code == 21422
     assert results.status == 400
   end
 
   test "invalid" do
-    results = post(phone_number: Magic.invalid())
+    results = buy_number(exactly: Magic.invalid())
 
     assert results.code == 21421
     assert results.status == 400
   end
 
   test "valid" do
-    results = post(phone_number: Magic.valid())
+    results = buy_number(exactly: Magic.valid())
 
     assert results.status == "new"
     assert results.friendly_name == "(500) 555-0006"
   end
 
   test "empty_area_code" do
-    results = post(area_code: Magic.empty_area_code())
+    results = buy_number(area_code: Magic.empty_area_code())
 
     assert results.code == 21452
     assert results.status == 400
   end
 
   test "available_area_code" do
-    results = post(area_code: Magic.available_area_code())
+    results = buy_number(area_code: Magic.available_area_code())
 
     assert results.status == "new"
     assert results.friendly_name == "(500) 555-0006"
   end
 
-  defp post(phone_number: num) do
+  defp buy_number(exactly: num) do
     headers = []
     options = [hackney: [basic_auth: {api_test_sid(), api_auth_token()}]]
     post_data = {:form, [{"PhoneNumber", num}]}
@@ -50,7 +50,7 @@ defmodule TwilioMagicValues.BuyNumberTest do
     Poison.Parser.parse!(resp.body, keys: :atoms)
   end
 
-  defp post(area_code: num) do
+  defp buy_number(area_code: num) do
     headers = []
     options = [hackney: [basic_auth: {api_test_sid(), api_auth_token()}]]
     post_data = {:form, [{"AreaCode", num}]}
@@ -68,9 +68,13 @@ defmodule TwilioMagicValues.BuyNumberTest do
     )
   end
 
-  defp api_auth_token,
-    do:
-      Application.get_env(:twilio_magic_values, :test_auth_token, "Test auth token not provided")
+  defp api_auth_token do
+    Application.get_env(
+      :twilio_magic_values,
+      :test_auth_token,
+      "Test auth token not provided"
+    )
+  end
 
   defp api_host, do: "https://api.twilio.com"
 
