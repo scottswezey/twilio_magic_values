@@ -23,6 +23,7 @@ Provide elixir apps with simple, pragmatic access to [magic testing values](http
 - [https://github.com/danielberkompas/ex_twilio](https://github.com/danielberkompas/ex_twilio)
 - [https://github.com/danielberkompas/telephonist](https://github.com/danielberkompas/telephonist)
 - [https://github.com/danielberkompas/ex_twiml](https://github.com/danielberkompas/ex_twiml)
+- Suggestions for this section are welcome. Please open an issue.
 ---
 
 ## Contributing
