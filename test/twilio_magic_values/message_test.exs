@@ -30,16 +30,15 @@ defmodule TwilioMagicValues.MessageTest do
     results = send_message(from: Magic.from_queue_full(),
                              to: Magic.to_other("+17148673509"))
 
-     assert results.status == 400
+     assert results.status == 429
      assert results.code == 21611
   end
   test "from_valid" do
     results = send_message(from: Magic.from_valid(),
                              to: Magic.to_other("+17148673509"))
 
-     IO.inspect results
-     assert results.num_media == 0
-     assert results.num_segments == 1
+     assert results.num_media == "0"
+     assert results.num_segments == "1"
   end
   test "to_invalid" do
     results = send_message(from: Magic.from_valid(),
