@@ -17,7 +17,7 @@ defmodule TwilioMagicValues do
       "https://www.twilio.com/docs/errors/21606"
 
   """
-  def error_info_url(integer)
+  def error_info_url(integer_or_string)
 
   def error_info_url(code) do
     "https://www.twilio.com/docs/errors/#{code}"
