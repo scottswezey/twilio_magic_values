@@ -1,0 +1,517 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.18.3">
+    <title>TwilioMagicValues.Message – Twilio Magic Values v0.2.0</title>
+    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
+    
+    <script src="dist/sidebar_items-fcd37188a8.js"></script>
+    
+    
+    
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Twilio Magic Values
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.2.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Twilio Magic Values v0.2.0</small>
+        TwilioMagicValues.Message
+        
+          <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L1" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>For tests sending SMS messages with Twilio.</p>
+<p>See: <a href="https://www.twilio.com/docs/iam/test-credentials#test-sms-messages">https://www.twilio.com/docs/iam/test-credentials#test-sms-messages</a></p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_cant_sms/0">from_cant_sms()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>CANT SEND SMS</strong> to send SMS from</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_invalid/0">from_invalid()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to send SMS from</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_queue_full/0">from_queue_full()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which has <strong>A FULL QUEUE</strong> to send SMS from</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_unowned/0">from_unowned()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>NOT VERIFIED BY YOUR ACCOUNT</strong> to send SMS from</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_valid/0">from_valid()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>VALID</strong> to send SMS from</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_blacklisted/0">to_blacklisted()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to send a message to</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_cant_route/0">to_cant_route()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNROUTABLE</strong> to send a message to</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_cant_sms/0">to_cant_sms()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>DOESNT SUPPORT SMS</strong> to send a message to</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_geo_permission_error/0">to_geo_permission_error()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which has a <strong>GEO PERMISSION ERROR</strong> to send a message to</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_invalid/0">to_invalid()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to send a message to</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_other/1">to_other(string)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>All other phone numbers are potentially valid and are verified normally</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="from_cant_sms/0">
+  
+  
+  <div class="detail-header">
+    <a href="#from_cant_sms/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_cant_sms()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L27" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>CANT SEND SMS</strong> to send SMS from.</p>
+<p>Expect the 21606 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="from_invalid/0">
+  
+  
+  <div class="detail-header">
+    <a href="#from_invalid/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_invalid()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L13" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>INVALID</strong> to send SMS from.</p>
+<p>Expect the 21212 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="from_queue_full/0">
+  
+  
+  <div class="detail-header">
+    <a href="#from_queue_full/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_queue_full()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L34" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which has <strong>A FULL QUEUE</strong> to send SMS from.</p>
+<p>Expect the 21611 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="from_unowned/0">
+  
+  
+  <div class="detail-header">
+    <a href="#from_unowned/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_unowned()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L20" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>NOT VERIFIED BY YOUR ACCOUNT</strong> to send SMS from.</p>
+<p>Expect the 21606 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="from_valid/0">
+  
+  
+  <div class="detail-header">
+    <a href="#from_valid/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_valid()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L41" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>VALID</strong> to send SMS from.</p>
+<p>Expect no error.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_blacklisted/0">
+  
+  
+  <div class="detail-header">
+    <a href="#to_blacklisted/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_blacklisted()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L69" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to send a message to.</p>
+<p>Expect the 21610 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_cant_route/0">
+  
+  
+  <div class="detail-header">
+    <a href="#to_cant_route/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_cant_route()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L55" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>UNROUTABLE</strong> to send a message to.</p>
+<p>Expect the 21612 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_cant_sms/0">
+  
+  
+  <div class="detail-header">
+    <a href="#to_cant_sms/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_cant_sms()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L76" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>DOESNT SUPPORT SMS</strong> to send a message to.</p>
+<p>Expect the 21614 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_geo_permission_error/0">
+  
+  
+  <div class="detail-header">
+    <a href="#to_geo_permission_error/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_geo_permission_error()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L62" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which has a <strong>GEO PERMISSION ERROR</strong> to send a message to.</p>
+<p>Expect the 21408 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_invalid/0">
+  
+  
+  <div class="detail-header">
+    <a href="#to_invalid/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_invalid()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L48" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>INVALID</strong> to send a message to.</p>
+<p>Expect the 21211 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_other/1">
+  
+  
+  <div class="detail-header">
+    <a href="#to_other/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_other(string)</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L84" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>All other phone numbers are potentially valid and are verified normally.</p>
+<p>Errors are dependent on input.</p>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-9bd040e5e5.js"></script>
+  
+  
+  
+  
+  </body>
+</html>
+

@@ -12,7 +12,7 @@ defmodule TwilioMagicValues.MixProject do
       # Docs
       name: "Twilio Magic Values",
       source_url: "https://github.com/scottswezey/twilio_magic_values",
-      docs: [main: "TwilioMagicValues", extras: ["README.md"]]
+      docs: [extras: ["README.md"], output: "docs"]
     ]
   end
 
