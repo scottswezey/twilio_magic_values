@@ -55,5 +55,7 @@ be found at [https://hexdocs.pm/twilio_magic_values](https://hexdocs.pm/twilio_m
 GPL v3; See `LICENSE` file.
 
 ## Author and Major Contributors
+
 Written by [Scott Swezey](https://github.com/scottswezey).
+
 Made possible by the [fantastic documentation](https://www.twilio.com/docs/iam/test-credentials) and [blog posts](https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html) provided by twilio.
