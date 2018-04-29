@@ -8,7 +8,7 @@ Provide elixir apps with simple, pragmatic access to [magic testing values](http
 ```elixir
 def deps do
   [
-    {:twilio_magic_values, git: "git://github.com/scottswezey/twilio_magic_values.git"}
+    {:twilio_magic_values, git: "git://github.com/scottswezey/twilio_magic_values.git", only: :test}
   ]
 end
 ```
