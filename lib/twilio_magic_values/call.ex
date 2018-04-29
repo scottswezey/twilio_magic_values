@@ -46,7 +46,7 @@ defmodule TwilioMagicValues.Call do
   @doc """
   Returns the magic phone number which has **GEO PERMISSION ERRORS** to call to.
 
-  Expect the 21515 API error from Twilio.
+  Expect the 21215 API error from Twilio.
   """
   def to_geo_permission_error, do: "+15005550003"
 
