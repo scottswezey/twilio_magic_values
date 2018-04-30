@@ -18,14 +18,14 @@ end
 
 ## Usage
 
-- You do **NOT** need to include this as in `applications` or `extra_applications`.
+- You do **NOT** need to include this in mix.exs `applications` or `extra_applications`.
 - Use the provided functions to replace hard coded magic phone numbers in your test code.
 
 ### Examples:
 
 - Instead of testing sending a message to `+15005550004`, use: `TwilioMagicValues.Message.to_blacklisted()`.
 - Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Call.from_invalid()`.
-- Instead of trying to purchase `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable()`.
+- Instead of testing a purchase for `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable()`.
 
 ## Resources
 - Docs are available at: [https://scottswezey.github.io/twilio_magic_values](https://scottswezey.github.io/twilio_magic_values). The Docs will be moved to Hexdocs when the project is posted on Hex.
