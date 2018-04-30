@@ -98,7 +98,7 @@ end</code></pre>
 </h2>
 
 <ul>
-<li>You do <strong>NOT</strong> need to include this as in <code class="inline">applications</code> or <code class="inline">extra_applications</code>.
+<li>You do <strong>NOT</strong> need to include this in mix.exs <code class="inline">applications</code> or <code class="inline">extra_applications</code>.
 </li>
 <li>Use the provided functions to replace hard coded magic phone numbers in your test code.
 </li>
@@ -113,7 +113,7 @@ end</code></pre>
 </li>
 <li>Instead of testing a call from <code class="inline">+15005550001</code>, use: <code class="inline">TwilioMagicValues.Call.from_invalid()</code>.
 </li>
-<li>Instead of trying to purchase <code class="inline">+15005550000</code>, use: <code class="inline">TwilioMagicValues.BuyNumber.unavailable()</code>.
+<li>Instead of testing a purchase for <code class="inline">+15005550000</code>, use: <code class="inline">TwilioMagicValues.BuyNumber.unavailable()</code>.
 </li>
 </ul>
 <h2 id="resources" class="section-heading">
