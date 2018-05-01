@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>Readme – Twilio Magic Values v0.2.0</title>
+    <title>Readme – Twilio Magic Values v0.3.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-aaad2ed26d.js"></script>
+    <script src="dist/sidebar_items-acfd401548.js"></script>
     
     
     
@@ -35,7 +35,7 @@
         Twilio Magic Values
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.2.0
+        v0.3.0
       </h2>
     </div>
     
@@ -109,11 +109,11 @@ end</code></pre>
 </h3>
 
 <ul>
-<li>Instead of testing sending a message to <code class="inline">+15005550004</code>, use: <code class="inline">TwilioMagicValues.Message.to_blacklisted()</code>.
+<li>Instead of testing sending a message to <code class="inline">+15005550004</code>, use: <code class="inline">TwilioMagicValues.Message.blacklisted_recipient/1</code>.
 </li>
-<li>Instead of testing a call from <code class="inline">+15005550001</code>, use: <code class="inline">TwilioMagicValues.Call.from_invalid()</code>.
+<li>Instead of testing a call from <code class="inline">+15005550001</code>, use: <code class="inline">TwilioMagicValues.Call.invalid_sender/1</code>.
 </li>
-<li>Instead of testing a purchase for <code class="inline">+15005550000</code>, use: <code class="inline">TwilioMagicValues.BuyNumber.unavailable()</code>.
+<li>Instead of testing a purchase for <code class="inline">+15005550000</code>, use: <code class="inline">TwilioMagicValues.BuyNumber.unavailable_phone_number/1</code>.
 </li>
 </ul>
 <h2 id="resources" class="section-heading">

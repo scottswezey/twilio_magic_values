@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>TwilioMagicValues.Call – Twilio Magic Values v0.2.0</title>
+    <title>TwilioMagicValues.Call – Twilio Magic Values v0.3.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-aaad2ed26d.js"></script>
+    <script src="dist/sidebar_items-acfd401548.js"></script>
     
     
     
@@ -35,7 +35,7 @@
         Twilio Magic Values
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.2.0
+        v0.3.0
       </h2>
     </div>
     
@@ -69,7 +69,7 @@
 
 
       <h1>
-        <small class="visible-xs">Twilio Magic Values v0.2.0</small>
+        <small class="visible-xs">Twilio Magic Values v0.3.0</small>
         TwilioMagicValues.Call
         
           <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L1" title="View Source" class="view-source" rel="help">
@@ -105,34 +105,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_invalid/0">from_invalid()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to call from</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#from_other/1">from_other(string)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>All other phone numbers, even ones owned by your production credentials, will return an error when used to call from</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#from_valid/0">from_valid()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>VALID</strong> to call from</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#to_blacklisted/0">to_blacklisted()</a>
+    <a href="#blacklisted_recipient/0">blacklisted_recipient()</a>
   </div>
   
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to call to</p>
@@ -141,16 +114,16 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_cant_route/0">to_cant_route()</a>
+    <a href="#from_other/1">from_other(phone_number)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNROUTABLE</strong> to call to</p>
+    <div class="summary-synopsis"><p>All other phone numbers, even ones owned by your production credentials, will return an error when used to call from</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_geo_permission_error/0">to_geo_permission_error()</a>
+    <a href="#geo_blocked_recipient/0">geo_blocked_recipient()</a>
   </div>
   
     <div class="summary-synopsis"><p>Returns the magic phone number which has <strong>GEO PERMISSION ERRORS</strong> to call to</p>
@@ -159,7 +132,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_invalid/0">to_invalid()</a>
+    <a href="#invalid_recipient/0">invalid_recipient()</a>
   </div>
   
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to call to</p>
@@ -168,10 +141,37 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_other/1">to_other(string)</a>
+    <a href="#invalid_sender/0">invalid_sender()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to call from</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_other/1">to_other(phone_number)</a>
   </div>
   
     <div class="summary-synopsis"><p>All other phone numbers are potentially valid and are verified normally</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unroutable_recipient/0">unroutable_recipient()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNROUTABLE</strong> to call to</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#valid_sender/0">valid_sender()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>VALID</strong> to call from</p>
 </div>
   
 </div>
@@ -195,15 +195,112 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_invalid/0">
+          <div class="detail" id="blacklisted_recipient/0">
   
   
   <div class="detail-header">
-    <a href="#from_invalid/0" class="detail-link" title="Link to this function">
+    <a href="#blacklisted_recipient/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_invalid()</span>
+    <span class="signature">blacklisted_recipient()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L57" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to call to.</p>
+<p>Expect the 21216 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="from_other/1">
+  
+  
+  <div class="detail-header">
+    <a href="#from_other/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_other(phone_number)</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L29" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>All other phone numbers, even ones owned by your production credentials, will return an error when used to call from.</p>
+<p>(Other numbers are not verified on your test credentials.)</p>
+<p>Expect the 21210 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="geo_blocked_recipient/0">
+  
+  
+  <div class="detail-header">
+    <a href="#geo_blocked_recipient/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">geo_blocked_recipient()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L50" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which has <strong>GEO PERMISSION ERRORS</strong> to call to.</p>
+<p>Expect the 21215 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="invalid_recipient/0">
+  
+  
+  <div class="detail-header">
+    <a href="#invalid_recipient/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">invalid_recipient()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L36" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>INVALID</strong> to call to.</p>
+<p>Expect the 21217 API error from Twilio.</p>
+
+  </section>
+</div>
+<div class="detail" id="invalid_sender/0">
+  
+  
+  <div class="detail-header">
+    <a href="#invalid_sender/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">invalid_sender()</span>
     
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L13" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -219,17 +316,17 @@
 
   </section>
 </div>
-<div class="detail" id="from_other/1">
+<div class="detail" id="to_other/1">
   
   
   <div class="detail-header">
-    <a href="#from_other/1" class="detail-link" title="Link to this function">
+    <a href="#to_other/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_other(string)</span>
+    <span class="signature">to_other(phone_number)</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L64" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -238,71 +335,22 @@
     
   </div>
   <section class="docstring">
-    <p>All other phone numbers, even ones owned by your production credentials, will return an error when used to call from.</p>
-<p>(Other numbers are not verified on your test credentials.)</p>
-<p>Expect the 21210 API error from Twilio.</p>
+    <p>All other phone numbers are potentially valid and are verified normally.</p>
+<p>Errors are dependent on input.</p>
 
   </section>
 </div>
-<div class="detail" id="from_valid/0">
+<div class="detail" id="unroutable_recipient/0">
   
   
   <div class="detail-header">
-    <a href="#from_valid/0" class="detail-link" title="Link to this function">
+    <a href="#unroutable_recipient/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_valid()</span>
+    <span class="signature">unroutable_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L20" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Returns the magic phone number which is <strong>VALID</strong> to call from.</p>
-<p>Expect no error.</p>
-
-  </section>
-</div>
-<div class="detail" id="to_blacklisted/0">
-  
-  
-  <div class="detail-header">
-    <a href="#to_blacklisted/0" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">to_blacklisted()</span>
-    
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L58" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to call to.</p>
-<p>Expect the 21216 API error from Twilio.</p>
-
-  </section>
-</div>
-<div class="detail" id="to_cant_route/0">
-  
-  
-  <div class="detail-header">
-    <a href="#to_cant_route/0" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">to_cant_route()</span>
-    
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L43" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -316,17 +364,17 @@
 
   </section>
 </div>
-<div class="detail" id="to_geo_permission_error/0">
+<div class="detail" id="valid_sender/0">
   
   
   <div class="detail-header">
-    <a href="#to_geo_permission_error/0" class="detail-link" title="Link to this function">
+    <a href="#valid_sender/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">to_geo_permission_error()</span>
+    <span class="signature">valid_sender()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -335,56 +383,8 @@
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which has <strong>GEO PERMISSION ERRORS</strong> to call to.</p>
-<p>Expect the 21215 API error from Twilio.</p>
-
-  </section>
-</div>
-<div class="detail" id="to_invalid/0">
-  
-  
-  <div class="detail-header">
-    <a href="#to_invalid/0" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">to_invalid()</span>
-    
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L37" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Returns the magic phone number which is <strong>INVALID</strong> to call to.</p>
-<p>Expect the 21217 API error from Twilio.</p>
-
-  </section>
-</div>
-<div class="detail" id="to_other/1">
-  
-  
-  <div class="detail-header">
-    <a href="#to_other/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">to_other(string)</span>
-    
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L66" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>All other phone numbers are potentially valid and are verified normally.</p>
-<p>Errors are dependent on input.</p>
+    <p>Returns the magic phone number which is <strong>VALID</strong> to call from.</p>
+<p>Expect no error.</p>
 
   </section>
 </div>
