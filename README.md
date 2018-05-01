@@ -13,7 +13,6 @@ def deps do
 end
 ```
 - This project is only needed for the `test` environment.
-- After version `1.0.0`, the project will follow [SEMVER](https://semver.org) 2.0.
 - Don't forget to run `mix deps.get`.
 
 ## Usage
