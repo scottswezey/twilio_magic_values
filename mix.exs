@@ -48,7 +48,9 @@ defmodule TwilioMagicValues.MixProject do
     [
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:httpoison, "~> 1.0", only: :test},
-      {:poison, "~> 3.1", only: :test}
+      {:poison, "~> 3.1", only: [:dev, :test]},
+      {:credo, "~> 0.9.1", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.8", only: :test}
     ]
   end
 end
