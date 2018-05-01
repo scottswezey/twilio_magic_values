@@ -1,5 +1,5 @@
 defmodule TwilioMagicValues.NumberPurchasingTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest TwilioMagicValues.NumberPurchasing
   alias TwilioMagicValues.NumberPurchasing, as: Magic
 

@@ -1,5 +1,5 @@
 defmodule TwilioMagicValues.MessagingTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest TwilioMagicValues.Messaging
   alias TwilioMagicValues.Messaging, as: Magic
 

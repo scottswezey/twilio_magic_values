@@ -1,5 +1,5 @@
 defmodule TwilioMagicValues.CallingTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest TwilioMagicValues.Calling
   alias TwilioMagicValues.Calling, as: Magic
 
