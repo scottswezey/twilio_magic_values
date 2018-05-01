@@ -5,22 +5,22 @@ defmodule TwilioMagicValues.BuyNumberTest do
 
   # POST https://api.twilio.com/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers
 
-  test "unavailable" do
-    results = buy_number(exactly: Magic.unavailable())
+  test "unavailable_phone_number" do
+    results = buy_number(exactly: Magic.unavailable_phone_number())
 
     assert results.code == 21422
     assert results.status == 400
   end
 
-  test "invalid" do
-    results = buy_number(exactly: Magic.invalid())
+  test "invalid_phone_number" do
+    results = buy_number(exactly: Magic.invalid_phone_number())
 
     assert results.code == 21421
     assert results.status == 400
   end
 
-  test "valid" do
-    results = buy_number(exactly: Magic.valid())
+  test "valid_phone_number" do
+    results = buy_number(exactly: Magic.valid_phone_number())
 
     assert results.status == "new"
     assert results.friendly_name == "(500) 555-0006"

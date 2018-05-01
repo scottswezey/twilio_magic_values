@@ -9,21 +9,21 @@ defmodule TwilioMagicValues.BuyNumber do
 
   Expect the 21421 API error from Twilio.
   """
-  def unavailable, do: "+15005550000"
+  def unavailable_phone_number, do: "+15005550000"
 
   @doc """
   Returns the magic phone number which is **INVALID** for purchase.
 
   Expect the 21421 API error from Twilio.
   """
-  def invalid, do: "+15005550001"
+  def invalid_phone_number, do: "+15005550001"
 
   @doc """
   Returns the magic phone number which is **VALID** for purchase.
 
   Expect no error.
   """
-  def valid, do: "+15005550006"
+  def valid_phone_number, do: "+15005550006"
 
   @doc """
   Returns the magic area code which has **NO** numbers available for purchase.

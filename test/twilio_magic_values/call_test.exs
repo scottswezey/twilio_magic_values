@@ -5,10 +5,10 @@ defmodule TwilioMagicValues.CallTest do
 
   # POST /2010-04-01/Accounts/{TestAccountSid}/Calls
 
-  test "from_invalid" do
+  test "invalid_sender" do
     results =
       make_call(
-        from: Magic.from_invalid(),
+        from: Magic.invalid_sender(),
         to: Magic.to_other("+17148675309")
       )
 
@@ -16,10 +16,10 @@ defmodule TwilioMagicValues.CallTest do
     assert results.code == 21212
   end
 
-  test "from_valid" do
+  test "valid_sender" do
     results =
       make_call(
-        from: Magic.from_valid(),
+        from: Magic.valid_sender(),
         to: Magic.to_other("+17148675309")
       )
 
@@ -27,44 +27,44 @@ defmodule TwilioMagicValues.CallTest do
     assert results.to_formatted == "(714) 867-5309"
   end
 
-  test "to_invalid" do
+  test "invalid_recipient" do
     results =
       make_call(
-        from: Magic.from_valid(),
-        to: Magic.to_invalid()
+        from: Magic.valid_sender(),
+        to: Magic.invalid_recipient()
       )
 
     assert results.status == 400
     assert results.code == 21217
   end
 
-  test "to_cant_route" do
+  test "unroutable_recipient" do
     results =
       make_call(
-        from: Magic.from_valid(),
-        to: Magic.to_cant_route()
+        from: Magic.valid_sender(),
+        to: Magic.unroutable_recipient()
       )
 
     assert results.status == 400
     assert results.code == 21214
   end
 
-  test "to_geo_permission_error" do
+  test "geo_blocked_recipient" do
     results =
       make_call(
-        from: Magic.from_valid(),
-        to: Magic.to_geo_permission_error()
+        from: Magic.valid_sender(),
+        to: Magic.geo_blocked_recipient()
       )
 
     assert results.status == 400
     assert results.code == 21215
   end
 
-  test "to_blacklisted" do
+  test "blacklisted_recipient" do
     results =
       make_call(
-        from: Magic.from_valid(),
-        to: Magic.to_blacklisted()
+        from: Magic.valid_sender(),
+        to: Magic.blacklisted_recipient()
       )
 
     assert results.status == 400
