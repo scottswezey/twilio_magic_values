@@ -116,6 +116,15 @@ end</code></pre>
 <li>Instead of testing a purchase for <code class="inline">+15005550000</code>, use: <code class="inline">TwilioMagicValues.BuyNumber.unavailable_phone_number/1</code>.
 </li>
 </ul>
+<h3 id="pseudocode-examples" class="section-heading">
+  <a href="#pseudocode-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Pseudocode examples
+</h3>
+
+<pre><code class="elixir">make_call(from: TwilioMagicValues.Call.valid_sender(),
+          to: TwilioMagicValues.Call.invalid_recipient())
+
+buy_number(exactly: TwilioMagicValues.BuyNumber.unavailable_phone_number())</code></pre>
 <h2 id="resources" class="section-heading">
   <a href="#resources" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Resources

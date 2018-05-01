@@ -27,6 +27,14 @@ end
 - Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Call.invalid_sender/1`.
 - Instead of testing a purchase for `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable_phone_number/1`.
 
+### Pseudocode examples
+```elixir
+make_call(from: TwilioMagicValues.Call.valid_sender(),
+          to: TwilioMagicValues.Call.invalid_recipient())
+
+buy_number(exactly: TwilioMagicValues.BuyNumber.unavailable_phone_number())
+```
+
 ## Resources
 - Docs are available at: [https://scottswezey.github.io/twilio_magic_values](https://scottswezey.github.io/twilio_magic_values). The Docs will be moved to Hexdocs when the project is posted on Hex.
 - The Twilio docs for test credentials and magic phone numbers: [https://www.twilio.com/docs/iam/test-credentials](https://www.twilio.com/docs/iam/test-credentials)
