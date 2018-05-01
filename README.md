@@ -29,10 +29,17 @@ end
 
 ### Pseudocode examples
 ```elixir
-make_call(from: TwilioMagicValues.Call.valid_sender(),
-          to: TwilioMagicValues.Call.invalid_recipient())
-
-buy_number(exactly: TwilioMagicValues.BuyNumber.unavailable_phone_number())
+make_test_call(from: TwilioMagicValues.Call.valid_sender(),
+               to: TwilioMagicValues.Call.invalid_recipient(),
+               ...)
+```
+```elixir
+buy_test_number(exactly: TwilioMagicValues.BuyNumber.valid_phone_number())
+```
+```elixir
+send_test_message(from: TwilioMagicValues.Message.valid_sender(),
+                  to: TwilioMagicValues.Message.cant_receive_sms(),
+                  ...)
 ```
 
 ## Resources
@@ -45,11 +52,10 @@ buy_number(exactly: TwilioMagicValues.BuyNumber.unavailable_phone_number())
 - [https://github.com/danielberkompas/telephonist](https://github.com/danielberkompas/telephonist)
 - [https://github.com/danielberkompas/ex_twiml](https://github.com/danielberkompas/ex_twiml)
 - Suggestions for this section are welcome. Please open an issue on GitHub.
----
 
 ## Contributing
-- Twilio doesn't currently provide magic numbers for other parts of their APIs. If there is something they add new, or a magic number they offer which is otherwise missing from this project, please open an issue or pull request on GitHub.
 - Issues and pull requests are welcome on [GitHub](https://github.com/scottswezey/twilio_magic_values).
+- Twilio doesn't currently provide magic numbers for other parts of their APIs. If there is something they add new, or a magic number they offer which is otherwise missing from this project, please open an issue or pull request.
 - Please run `mix format` before committing.
 - Ensure tests pass before committing. You will need to copy `config/test.secret.exs.sample` to `config/test.secret.exs` and add your own [testing credentials](https://www.twilio.com/console/account/settings) from Twilio.
 - Do not bump the version number in your pull requests.

@@ -121,10 +121,13 @@ end</code></pre>
   Pseudocode examples
 </h3>
 
-<pre><code class="elixir">make_call(from: TwilioMagicValues.Call.valid_sender(),
-          to: TwilioMagicValues.Call.invalid_recipient())
-
-buy_number(exactly: TwilioMagicValues.BuyNumber.unavailable_phone_number())</code></pre>
+<pre><code class="elixir">make_test_call(from: TwilioMagicValues.Call.valid_sender(),
+               to: TwilioMagicValues.Call.invalid_recipient(),
+               ...)</code></pre>
+<pre><code class="elixir">buy_test_number(exactly: TwilioMagicValues.BuyNumber.valid_phone_number())</code></pre>
+<pre><code class="elixir">send_test_message(from: TwilioMagicValues.Message.valid_sender(),
+                  to: TwilioMagicValues.Message.cant_receive_sms(),
+                  ...)</code></pre>
 <h2 id="resources" class="section-heading">
   <a href="#resources" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Resources
