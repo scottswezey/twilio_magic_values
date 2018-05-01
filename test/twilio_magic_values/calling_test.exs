@@ -3,8 +3,6 @@ defmodule TwilioMagicValues.CallingTest do
   doctest TwilioMagicValues.Calling
   alias TwilioMagicValues.Calling, as: Magic
 
-  # POST /2010-04-01/Accounts/{TestAccountSid}/Calls
-
   test "invalid_sender" do
     results =
       make_call(

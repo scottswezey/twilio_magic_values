@@ -3,8 +3,6 @@ defmodule TwilioMagicValues.NumberPurchasingTest do
   doctest TwilioMagicValues.NumberPurchasing
   alias TwilioMagicValues.NumberPurchasing, as: Magic
 
-  # POST https://api.twilio.com/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers
-
   test "unavailable_phone_number" do
     results = buy_number(exactly: Magic.unavailable_phone_number())
 

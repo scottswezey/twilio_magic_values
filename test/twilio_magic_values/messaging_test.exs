@@ -3,8 +3,6 @@ defmodule TwilioMagicValues.MessagingTest do
   doctest TwilioMagicValues.Messaging
   alias TwilioMagicValues.Messaging, as: Magic
 
-  # POST /2010-04-01/Accounts/{TestAccountSid}/Messages
-
   test "invalid_sender" do
     results =
       send_message(
