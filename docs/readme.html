@@ -8,7 +8,7 @@
     <title>Readme – Twilio Magic Values v0.4.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-35e6397a6b.js"></script>
+    <script src="dist/sidebar_items-d5d61da3ae.js"></script>
     
     
     
@@ -113,7 +113,7 @@ end</code></pre>
 </li>
 <li>Instead of testing a call from <code class="inline">+15005550001</code>, use: <code class="inline">TwilioMagicValues.Calling.invalid_sender/1</code>.
 </li>
-<li>Instead of testing a purchase for <code class="inline">+15005550000</code>, use: <code class="inline">TwilioMagicValues.BuyNumber.unavailable_phone_number/1</code>.
+<li>Instead of testing a purchase for <code class="inline">+15005550000</code>, use: <code class="inline">TwilioMagicValues.NumberPurchasing.unavailable_phone_number/1</code>.
 </li>
 </ul>
 <h3 id="pseudocode-examples" class="section-heading">
@@ -125,8 +125,8 @@ end</code></pre>
 make_test_call(from: Calling.valid_sender(),
                to: Calling.invalid_recipient(),
                ...)</code></pre>
-<pre><code class="elixir">alias TwilioMagicValues.BuyNumber
-buy_test_number(exactly: BuyNumber.valid_phone_number())</code></pre>
+<pre><code class="elixir">alias TwilioMagicValues.NumberPurchasing
+buy_test_number(exactly: NumberPurchasing.valid_phone_number())</code></pre>
 <pre><code class="elixir">alias TwilioMagicValues.Messaging
 send_test_message(from: Messaging.valid_sender(),
                   to: Messaging.cant_receive_sms(),

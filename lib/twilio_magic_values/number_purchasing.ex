@@ -1,4 +1,4 @@
-defmodule TwilioMagicValues.BuyNumber do
+defmodule TwilioMagicValues.NumberPurchasing do
   @moduledoc """
   Wrapper for Twilio magic phone numbers used in tests buying phone numbers.
 
@@ -11,7 +11,7 @@ defmodule TwilioMagicValues.BuyNumber do
 
   ## Example
 
-      iex> map = buy_number(exactly: TwilioMagicValues.BuyNumber.unavailable_phone_number())
+      iex> map = buy_number(exactly: TwilioMagicValues.NumberPurchasing.unavailable_phone_number())
       iex> Map.get(map, :code)
       21422
   """
@@ -24,7 +24,7 @@ defmodule TwilioMagicValues.BuyNumber do
 
   ## Example
 
-      iex> map = buy_number(exactly: TwilioMagicValues.BuyNumber.invalid_phone_number())
+      iex> map = buy_number(exactly: TwilioMagicValues.NumberPurchasing.invalid_phone_number())
       iex> Map.get(map, :code)
       21421
   """
@@ -37,7 +37,7 @@ defmodule TwilioMagicValues.BuyNumber do
 
   ## Example
 
-      iex> map = buy_number(exactly: TwilioMagicValues.BuyNumber.valid_phone_number())
+      iex> map = buy_number(exactly: TwilioMagicValues.NumberPurchasing.valid_phone_number())
       iex> Map.get(map, :code, "There was no error code")
       "There was no error code"
       iex> Map.get(map, :friendly_name)
@@ -52,7 +52,7 @@ defmodule TwilioMagicValues.BuyNumber do
 
   ## Example
 
-      iex> map = buy_number(area_code: TwilioMagicValues.BuyNumber.empty_area_code())
+      iex> map = buy_number(area_code: TwilioMagicValues.NumberPurchasing.empty_area_code())
       iex> Map.get(map, :code)
       21452
   """
@@ -65,7 +65,7 @@ defmodule TwilioMagicValues.BuyNumber do
 
   ## Example
 
-      iex> map = buy_number(area_code: TwilioMagicValues.BuyNumber.available_area_code())
+      iex> map = buy_number(area_code: TwilioMagicValues.NumberPurchasing.available_area_code())
       iex> Map.get(map, :code, "There was no error code")
       "There was no error code"
       iex> Map.get(map, :friendly_name)

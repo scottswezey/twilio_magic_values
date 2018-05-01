@@ -4,12 +4,12 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-35e6397a6b.js
+dist/sidebar_items-d5d61da3ae.js
 api-reference.html
 readme.html
 search.html
 404.html
-TwilioMagicValues.BuyNumber.html
 TwilioMagicValues.Calling.html
 TwilioMagicValues.Messaging.html
+TwilioMagicValues.NumberPurchasing.html
 index.html
