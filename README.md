@@ -23,9 +23,9 @@ end
 
 ### Examples:
 
-- Instead of testing sending a message to `+15005550004`, use: `TwilioMagicValues.Message.to_blacklisted()`.
-- Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Call.from_invalid()`.
-- Instead of testing a purchase for `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable()`.
+- Instead of testing sending a message to `+15005550004`, use: `TwilioMagicValues.Message.blacklisted_recipient/1`.
+- Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Call.invalid_sender/1`.
+- Instead of testing a purchase for `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable_phone_number/1`.
 
 ## Resources
 - Docs are available at: [https://scottswezey.github.io/twilio_magic_values](https://scottswezey.github.io/twilio_magic_values). The Docs will be moved to Hexdocs when the project is posted on Hex.

@@ -35,7 +35,7 @@ defmodule TwilioMagicValues.BuyNumber do
   @doc """
   Returns the magic area code which has numbers available for purchase.
 
-  Expect no error.
+  Expect no error, and the purchased phone number to be: +15005550006
   """
   def available_area_code, do: "500"
 end
