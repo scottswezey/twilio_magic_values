@@ -1,7 +1,7 @@
-defmodule TwilioMagicValues.MessageTest do
+defmodule TwilioMagicValues.MessagingTest do
   use ExUnit.Case
-  doctest TwilioMagicValues.Message
-  alias TwilioMagicValues.Message, as: Magic
+  doctest TwilioMagicValues.Messaging
+  alias TwilioMagicValues.Messaging, as: Magic
 
   # POST /2010-04-01/Accounts/{TestAccountSid}/Messages
 

@@ -1,7 +1,7 @@
-defmodule TwilioMagicValues.BuyNumberTest do
+defmodule TwilioMagicValues.NumberPurchasingTest do
   use ExUnit.Case
-  doctest TwilioMagicValues.BuyNumber
-  alias TwilioMagicValues.BuyNumber, as: Magic
+  doctest TwilioMagicValues.NumberPurchasing
+  alias TwilioMagicValues.NumberPurchasing, as: Magic
 
   # POST https://api.twilio.com/2010-04-01/Accounts/{TestAccountSid}/IncomingPhoneNumbers
 

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>TwilioMagicValues.Call – Twilio Magic Values v0.3.0</title>
+    <title>TwilioMagicValues.Calling – Twilio Magic Values v0.4.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-acfd401548.js"></script>
+    <script src="dist/sidebar_items-35e6397a6b.js"></script>
     
     
     
@@ -35,7 +35,7 @@
         Twilio Magic Values
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.3.0
+        v0.4.0
       </h2>
     </div>
     
@@ -69,10 +69,10 @@
 
 
       <h1>
-        <small class="visible-xs">Twilio Magic Values v0.3.0</small>
-        TwilioMagicValues.Call
+        <small class="visible-xs">Twilio Magic Values v0.4.0</small>
+        TwilioMagicValues.Calling
         
-          <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -205,7 +205,7 @@
     </a>
     <span class="signature">blacklisted_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L101" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -221,7 +221,7 @@
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.blacklisted_recipient())
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.blacklisted_recipient())
 iex&gt; Map.get(map, :code)
 21216</code></pre>
 
@@ -237,7 +237,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">from_other(phone_number)</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L49" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -254,7 +254,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Call.from_other(&quot;+17148675308&quot;), to: TwilioMagicValues.Call.to_other(&quot;+17148675309&quot;))
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.from_other(&quot;+17148675308&quot;), to: TwilioMagicValues.Calling.to_other(&quot;+17148675309&quot;))
 iex&gt; Map.get(map, :code)
 21210</code></pre>
 
@@ -270,7 +270,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">geo_blocked_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L88" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -286,7 +286,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.geo_blocked_recipient())
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.geo_blocked_recipient())
 iex&gt; Map.get(map, :code)
 21215</code></pre>
 
@@ -302,7 +302,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">invalid_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L62" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -318,7 +318,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.invalid_recipient())
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.invalid_recipient())
 iex&gt; Map.get(map, :code)
 21217</code></pre>
 
@@ -334,7 +334,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">invalid_sender()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L19" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -350,7 +350,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Call.invalid_sender(), to: TwilioMagicValues.Call.to_other(&quot;+17148675309&quot;))
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.invalid_sender(), to: TwilioMagicValues.Calling.to_other(&quot;+17148675309&quot;))
 iex&gt; Map.get(map, :code)
 21212</code></pre>
 
@@ -366,7 +366,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">to_other(phone_number)</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L108" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -390,7 +390,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">unroutable_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L75" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -406,7 +406,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.unroutable_recipient())
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.unroutable_recipient())
 iex&gt; Map.get(map, :code)
 21214</code></pre>
 
@@ -422,7 +422,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">valid_sender()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/call.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -438,7 +438,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.to_other(&quot;+17148675309&quot;))
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.to_other(&quot;+17148675309&quot;))
 iex&gt; Map.get(map, :code, &quot;There is no error code&quot;)
 &quot;There is no error code&quot;
 iex&gt; Map.get(map, :from_formatted)

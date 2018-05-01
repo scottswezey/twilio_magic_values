@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>TwilioMagicValues.Message – Twilio Magic Values v0.3.0</title>
+    <title>TwilioMagicValues.Messaging – Twilio Magic Values v0.4.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-acfd401548.js"></script>
+    <script src="dist/sidebar_items-35e6397a6b.js"></script>
     
     
     
@@ -35,7 +35,7 @@
         Twilio Magic Values
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.3.0
+        v0.4.0
       </h2>
     </div>
     
@@ -69,10 +69,10 @@
 
 
       <h1>
-        <small class="visible-xs">Twilio Magic Values v0.3.0</small>
-        TwilioMagicValues.Message
+        <small class="visible-xs">Twilio Magic Values v0.4.0</small>
+        TwilioMagicValues.Messaging
         
-          <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -232,7 +232,7 @@
     </a>
     <span class="signature">blacklisted_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L127" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L127" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -248,7 +248,7 @@
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.blacklisted_recipient())
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.blacklisted_recipient())
 iex&gt; Map.get(map, :code)
 21610</code></pre>
 
@@ -264,7 +264,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">cant_receive_sms()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L140" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -280,7 +280,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.cant_receive_sms())
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.cant_receive_sms())
 iex&gt; Map.get(map, :code)
 21614</code></pre>
 
@@ -296,7 +296,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">geo_blocked_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L114" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -312,7 +312,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.geo_blocked_recipient())
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.geo_blocked_recipient())
 iex&gt; Map.get(map, :code)
 21408</code></pre>
 
@@ -328,7 +328,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">invalid_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L88" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -344,7 +344,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.invalid_recipient())
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.invalid_recipient())
 iex&gt; Map.get(map, :code)
 21211</code></pre>
 
@@ -360,7 +360,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">invalid_sender()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L19" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -376,7 +376,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.invalid_sender(), to: TwilioMagicValues.Message.to_other(&quot;+17148673509&quot;))
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.invalid_sender(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
 iex&gt; Map.get(map, :code)
 21212</code></pre>
 
@@ -392,7 +392,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">sender_cant_send_sms()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L45" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -408,7 +408,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.sender_cant_send_sms(), to: TwilioMagicValues.Message.to_other(&quot;+17148673509&quot;))
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.sender_cant_send_sms(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
 iex&gt; Map.get(map, :code)
 21606</code></pre>
 
@@ -424,7 +424,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">sender_queue_full()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L58" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -440,7 +440,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.sender_queue_full(), to: TwilioMagicValues.Message.to_other(&quot;+17148673509&quot;))
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.sender_queue_full(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
 iex&gt; Map.get(map, :code)
 21611</code></pre>
 
@@ -456,7 +456,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">to_other(phone_number)</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L147" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -480,7 +480,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">unowned_number()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -496,7 +496,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.unowned_number(), to: TwilioMagicValues.Message.to_other(&quot;+17148673509&quot;))
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.unowned_number(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
 iex&gt; Map.get(map, :code)
 21606</code></pre>
 
@@ -512,7 +512,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">unroutable_recipient()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L101" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -528,7 +528,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.unroutable_recipient())
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.unroutable_recipient())
 iex&gt; Map.get(map, :code)
 21612</code></pre>
 
@@ -544,7 +544,7 @@ iex&gt; Map.get(map, :code)
     </a>
     <span class="signature">valid_sender()</span>
     
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/message.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L75" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -560,7 +560,7 @@ iex&gt; Map.get(map, :code)
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.to_other(&quot;+17148673509&quot;))
+<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
 iex&gt; Map.get(map, :code, &quot;There is no error code&quot;)
 &quot;There is no error code&quot;
 iex&gt; Map.get(map, :num_segments)

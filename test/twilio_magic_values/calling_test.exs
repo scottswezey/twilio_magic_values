@@ -1,7 +1,7 @@
-defmodule TwilioMagicValues.CallTest do
+defmodule TwilioMagicValues.CallingTest do
   use ExUnit.Case
-  doctest TwilioMagicValues.Call
-  alias TwilioMagicValues.Call, as: Magic
+  doctest TwilioMagicValues.Calling
+  alias TwilioMagicValues.Calling, as: Magic
 
   # POST /2010-04-01/Accounts/{TestAccountSid}/Calls
 

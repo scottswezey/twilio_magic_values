@@ -1,4 +1,4 @@
-defmodule TwilioMagicValues.Message do
+defmodule TwilioMagicValues.Messaging do
   @moduledoc """
   Wrapper for Twilio magic phone numbers used in tests sending SMS messages.
 
@@ -12,7 +12,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.invalid_sender(), to: TwilioMagicValues.Message.to_other("+17148673509"))
+      iex> map = send_message(from: TwilioMagicValues.Messaging.invalid_sender(), to: TwilioMagicValues.Messaging.to_other("+17148673509"))
       iex> Map.get(map, :code)
       21212
   """
@@ -25,7 +25,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.unowned_number(), to: TwilioMagicValues.Message.to_other("+17148673509"))
+      iex> map = send_message(from: TwilioMagicValues.Messaging.unowned_number(), to: TwilioMagicValues.Messaging.to_other("+17148673509"))
       iex> Map.get(map, :code)
       21606
   """
@@ -38,7 +38,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.sender_cant_send_sms(), to: TwilioMagicValues.Message.to_other("+17148673509"))
+      iex> map = send_message(from: TwilioMagicValues.Messaging.sender_cant_send_sms(), to: TwilioMagicValues.Messaging.to_other("+17148673509"))
       iex> Map.get(map, :code)
       21606
   """
@@ -51,7 +51,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.sender_queue_full(), to: TwilioMagicValues.Message.to_other("+17148673509"))
+      iex> map = send_message(from: TwilioMagicValues.Messaging.sender_queue_full(), to: TwilioMagicValues.Messaging.to_other("+17148673509"))
       iex> Map.get(map, :code)
       21611
   """
@@ -64,7 +64,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.to_other("+17148673509"))
+      iex> map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.to_other("+17148673509"))
       iex> Map.get(map, :code, "There is no error code")
       "There is no error code"
       iex> Map.get(map, :num_segments)
@@ -81,7 +81,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.invalid_recipient())
+      iex> map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.invalid_recipient())
       iex> Map.get(map, :code)
       21211
   """
@@ -94,7 +94,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.unroutable_recipient())
+      iex> map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.unroutable_recipient())
       iex> Map.get(map, :code)
       21612
   """
@@ -107,7 +107,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.geo_blocked_recipient())
+      iex> map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.geo_blocked_recipient())
       iex> Map.get(map, :code)
       21408
   """
@@ -120,7 +120,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.blacklisted_recipient())
+      iex> map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.blacklisted_recipient())
       iex> Map.get(map, :code)
       21610
   """
@@ -133,7 +133,7 @@ defmodule TwilioMagicValues.Message do
 
   ## Example
 
-      iex> map = send_message(from: TwilioMagicValues.Message.valid_sender(), to: TwilioMagicValues.Message.cant_receive_sms())
+      iex> map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.cant_receive_sms())
       iex> Map.get(map, :code)
       21614
   """

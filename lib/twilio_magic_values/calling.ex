@@ -1,4 +1,4 @@
-defmodule TwilioMagicValues.Call do
+defmodule TwilioMagicValues.Calling do
   @moduledoc """
   Wrapper for Twilio magic phone numbers used in tests making calls.
 
@@ -12,7 +12,7 @@ defmodule TwilioMagicValues.Call do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Call.invalid_sender(), to: TwilioMagicValues.Call.to_other("+17148675309"))
+      iex> map = make_call(from: TwilioMagicValues.Calling.invalid_sender(), to: TwilioMagicValues.Calling.to_other("+17148675309"))
       iex> Map.get(map, :code)
       21212
   """
@@ -25,7 +25,7 @@ defmodule TwilioMagicValues.Call do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.to_other("+17148675309"))
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.to_other("+17148675309"))
       iex> Map.get(map, :code, "There is no error code")
       "There is no error code"
       iex> Map.get(map, :from_formatted)
@@ -42,7 +42,7 @@ defmodule TwilioMagicValues.Call do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Call.from_other("+17148675308"), to: TwilioMagicValues.Call.to_other("+17148675309"))
+      iex> map = make_call(from: TwilioMagicValues.Calling.from_other("+17148675308"), to: TwilioMagicValues.Calling.to_other("+17148675309"))
       iex> Map.get(map, :code)
       21210
   """
@@ -55,7 +55,7 @@ defmodule TwilioMagicValues.Call do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.invalid_recipient())
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.invalid_recipient())
       iex> Map.get(map, :code)
       21217
   """
@@ -68,7 +68,7 @@ defmodule TwilioMagicValues.Call do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.unroutable_recipient())
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.unroutable_recipient())
       iex> Map.get(map, :code)
       21214
   """
@@ -81,7 +81,7 @@ defmodule TwilioMagicValues.Call do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.geo_blocked_recipient())
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.geo_blocked_recipient())
       iex> Map.get(map, :code)
       21215
   """
@@ -94,7 +94,7 @@ defmodule TwilioMagicValues.Call do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.blacklisted_recipient())
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.blacklisted_recipient())
       iex> Map.get(map, :code)
       21216
   """

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>Readme – Twilio Magic Values v0.3.0</title>
+    <title>Readme – Twilio Magic Values v0.4.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-acfd401548.js"></script>
+    <script src="dist/sidebar_items-35e6397a6b.js"></script>
     
     
     
@@ -35,7 +35,7 @@
         Twilio Magic Values
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.3.0
+        v0.4.0
       </h2>
     </div>
     
@@ -109,9 +109,9 @@ end</code></pre>
 </h3>
 
 <ul>
-<li>Instead of testing sending a message to <code class="inline">+15005550004</code>, use: <code class="inline">TwilioMagicValues.Message.blacklisted_recipient/1</code>.
+<li>Instead of testing sending a message to <code class="inline">+15005550004</code>, use: <code class="inline">TwilioMagicValues.Messaging.blacklisted_recipient/1</code>.
 </li>
-<li>Instead of testing a call from <code class="inline">+15005550001</code>, use: <code class="inline">TwilioMagicValues.Call.invalid_sender/1</code>.
+<li>Instead of testing a call from <code class="inline">+15005550001</code>, use: <code class="inline">TwilioMagicValues.Calling.invalid_sender/1</code>.
 </li>
 <li>Instead of testing a purchase for <code class="inline">+15005550000</code>, use: <code class="inline">TwilioMagicValues.BuyNumber.unavailable_phone_number/1</code>.
 </li>
@@ -121,12 +121,15 @@ end</code></pre>
   Pseudocode examples
 </h3>
 
-<pre><code class="elixir">make_test_call(from: TwilioMagicValues.Call.valid_sender(),
-               to: TwilioMagicValues.Call.invalid_recipient(),
+<pre><code class="elixir">alias TwilioMagicValues.Calling
+make_test_call(from: Calling.valid_sender(),
+               to: Calling.invalid_recipient(),
                ...)</code></pre>
-<pre><code class="elixir">buy_test_number(exactly: TwilioMagicValues.BuyNumber.valid_phone_number())</code></pre>
-<pre><code class="elixir">send_test_message(from: TwilioMagicValues.Message.valid_sender(),
-                  to: TwilioMagicValues.Message.cant_receive_sms(),
+<pre><code class="elixir">alias TwilioMagicValues.BuyNumber
+buy_test_number(exactly: BuyNumber.valid_phone_number())</code></pre>
+<pre><code class="elixir">alias TwilioMagicValues.Messaging
+send_test_message(from: Messaging.valid_sender(),
+                  to: Messaging.cant_receive_sms(),
                   ...)</code></pre>
 <h2 id="resources" class="section-heading">
   <a href="#resources" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -156,16 +159,15 @@ end</code></pre>
 <li>Suggestions for this section are welcome. Please open an issue on GitHub.
 </li>
 </ul>
-<hr class="thin"/>
 <h2 id="contributing" class="section-heading">
   <a href="#contributing" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Contributing
 </h2>
 
 <ul>
-<li>Twilio doesn’t currently provide magic numbers for other parts of their APIs. If there is something they add new, or a magic number they offer which is otherwise missing from this project, please open an issue or pull request on GitHub.
-</li>
 <li>Issues and pull requests are welcome on <a href="https://github.com/scottswezey/twilio_magic_values">GitHub</a>.
+</li>
+<li>Twilio doesn’t currently provide magic numbers for other parts of their APIs. If there is something they add new, or a magic number they offer which is otherwise missing from this project, please open an issue or pull request.
 </li>
 <li>Please run <code class="inline">mix format</code> before committing.
 </li>

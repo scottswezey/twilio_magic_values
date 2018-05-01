@@ -23,22 +23,25 @@ end
 
 ### Examples:
 
-- Instead of testing sending a message to `+15005550004`, use: `TwilioMagicValues.Message.blacklisted_recipient/1`.
-- Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Call.invalid_sender/1`.
+- Instead of testing sending a message to `+15005550004`, use: `TwilioMagicValues.Messaging.blacklisted_recipient/1`.
+- Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Calling.invalid_sender/1`.
 - Instead of testing a purchase for `+15005550000`, use: `TwilioMagicValues.BuyNumber.unavailable_phone_number/1`.
 
 ### Pseudocode examples
 ```elixir
-make_test_call(from: TwilioMagicValues.Call.valid_sender(),
-               to: TwilioMagicValues.Call.invalid_recipient(),
+alias TwilioMagicValues.Calling
+make_test_call(from: Calling.valid_sender(),
+               to: Calling.invalid_recipient(),
                ...)
 ```
 ```elixir
-buy_test_number(exactly: TwilioMagicValues.BuyNumber.valid_phone_number())
+alias TwilioMagicValues.BuyNumber
+buy_test_number(exactly: BuyNumber.valid_phone_number())
 ```
 ```elixir
-send_test_message(from: TwilioMagicValues.Message.valid_sender(),
-                  to: TwilioMagicValues.Message.cant_receive_sms(),
+alias TwilioMagicValues.Messaging
+send_test_message(from: Messaging.valid_sender(),
+                  to: Messaging.cant_receive_sms(),
                   ...)
 ```
 
