@@ -9,6 +9,12 @@ defmodule TwilioMagicValues.Call do
   Returns the magic phone number which is **INVALID** to call from.
 
   Expect the [21212](https://www.twilio.com/docs/errors/21212) API error from Twilio.
+
+  ## Example
+
+      iex> map = make_call(from: TwilioMagicValues.Call.invalid_sender(), to: TwilioMagicValues.Call.to_other("+17148675309"))
+      iex> Map.get(map, :code)
+      21212
   """
   def invalid_sender, do: "+15005550001"
 
@@ -16,6 +22,14 @@ defmodule TwilioMagicValues.Call do
   Returns the magic phone number which is **VALID** to call from.
 
   Expect no error.
+
+  ## Example
+
+      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.to_other("+17148675309"))
+      iex> Map.get(map, :code, "There is no error code")
+      "There is no error code"
+      iex> Map.get(map, :from_formatted)
+      "(500) 555-0006"
   """
   def valid_sender, do: "+15005550006"
 
@@ -25,6 +39,12 @@ defmodule TwilioMagicValues.Call do
   (Other numbers are not verified on your test credentials.)
 
   Expect the [21210](https://www.twilio.com/docs/errors/21210) API error from Twilio.
+
+  ## Example
+
+      iex> map = make_call(from: TwilioMagicValues.Call.from_other("+17148675308"), to: TwilioMagicValues.Call.to_other("+17148675309"))
+      iex> Map.get(map, :code)
+      21210
   """
   def from_other(phone_number), do: phone_number
 
@@ -32,6 +52,12 @@ defmodule TwilioMagicValues.Call do
   Returns the magic phone number which is **INVALID** to call to.
 
   Expect the [21217](https://www.twilio.com/docs/errors/21217) API error from Twilio.
+
+  ## Example
+
+      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.invalid_recipient())
+      iex> Map.get(map, :code)
+      21217
   """
   def invalid_recipient, do: "+15005550001"
 
@@ -39,6 +65,12 @@ defmodule TwilioMagicValues.Call do
   Returns the magic phone number which is **UNROUTABLE** to call to.
 
   Expect the [21214](https://www.twilio.com/docs/errors/21214) API error from Twilio.
+
+  ## Example
+
+      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.unroutable_recipient())
+      iex> Map.get(map, :code)
+      21214
   """
   def unroutable_recipient, do: "+15005550002"
 
@@ -46,6 +78,12 @@ defmodule TwilioMagicValues.Call do
   Returns the magic phone number which has **GEO PERMISSION ERRORS** to call to.
 
   Expect the [21215](https://www.twilio.com/docs/errors/21215) API error from Twilio.
+
+  ## Example
+
+      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.geo_blocked_recipient())
+      iex> Map.get(map, :code)
+      21215
   """
   def geo_blocked_recipient, do: "+15005550003"
 
@@ -53,11 +91,17 @@ defmodule TwilioMagicValues.Call do
   Returns the magic phone number which is **BLACKLISTED** to call to.
 
   Expect the [21216](https://www.twilio.com/docs/errors/21216) API error from Twilio.
+
+  ## Example
+
+      iex> map = make_call(from: TwilioMagicValues.Call.valid_sender(), to: TwilioMagicValues.Call.blacklisted_recipient())
+      iex> Map.get(map, :code)
+      21216
   """
   def blacklisted_recipient, do: "+15005550004"
 
   @doc """
-  All other phone numbers are potentially valid and are verified normally.
+  All other recipient phone numbers are potentially valid and are verified normally.
 
   Errors are dependent on input.
   """

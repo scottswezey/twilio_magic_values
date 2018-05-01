@@ -195,8 +195,8 @@
 </h2>
 
 <pre><code class="iex elixir">iex&gt; map = buy_number(area_code: TwilioMagicValues.BuyNumber.available_area_code())
-iex&gt; Map.get(map, :code, &quot;There was no error&quot;)
-&quot;There was no error&quot;
+iex&gt; Map.get(map, :code, &quot;There was no error code&quot;)
+&quot;There was no error code&quot;
 iex&gt; Map.get(map, :friendly_name)
 &quot;(500) 555-0006&quot;</code></pre>
 
@@ -325,8 +325,8 @@ iex&gt; Map.get(map, :code)
 </h2>
 
 <pre><code class="iex elixir">iex&gt; map = buy_number(exactly: TwilioMagicValues.BuyNumber.valid_phone_number())
-iex&gt; Map.get(map, :code, &quot;There was no error&quot;)
-&quot;There was no error&quot;
+iex&gt; Map.get(map, :code, &quot;There was no error code&quot;)
+&quot;There was no error code&quot;
 iex&gt; Map.get(map, :friendly_name)
 &quot;(500) 555-0006&quot;</code></pre>
 
