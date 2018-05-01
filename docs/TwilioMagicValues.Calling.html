@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>TwilioMagicValues.Calling – Twilio Magic Values v0.4.0</title>
+    <title>TwilioMagicValues.Calling – Twilio Magic Values v0.5.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-76e6f099b3.js"></script>
+    <script src="dist/sidebar_items-93a7b39cb2.js"></script>
     
     
     
@@ -35,7 +35,7 @@
         Twilio Magic Values
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.4.0
+        v0.5.0
       </h2>
     </div>
     
@@ -69,7 +69,7 @@
 
 
       <h1>
-        <small class="visible-xs">Twilio Magic Values v0.4.0</small>
+        <small class="visible-xs">Twilio Magic Values v0.5.0</small>
         TwilioMagicValues.Calling
         
           <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L1" title="View Source" class="view-source" rel="help">
@@ -108,7 +108,7 @@
     <a href="#blacklisted_recipient/0">blacklisted_recipient()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to call to</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>BLACKLISTED</strong> such that your account cannot call it</p>
 </div>
   
 </div>
@@ -117,7 +117,7 @@
     <a href="#from_other/1">from_other(phone_number)</a>
   </div>
   
-    <div class="summary-synopsis"><p>All other phone numbers, even ones owned by your production credentials, will return an error when used to call from</p>
+    <div class="summary-synopsis"><p>All other phone numbers will return an error when calling from them</p>
 </div>
   
 </div>
@@ -126,7 +126,16 @@
     <a href="#geo_blocked_recipient/0">geo_blocked_recipient()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which has <strong>GEO PERMISSION ERRORS</strong> to call to</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which returns a <strong>GEO PERMISSION ERROR</strong> when called</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#invalid_caller_id/0">invalid_caller_id()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to call from</p>
 </div>
   
 </div>
@@ -135,16 +144,7 @@
     <a href="#invalid_recipient/0">invalid_recipient()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to call to</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#invalid_sender/0">invalid_sender()</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to call from</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to call</p>
 </div>
   
 </div>
@@ -162,13 +162,13 @@
     <a href="#unroutable_recipient/0">unroutable_recipient()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNROUTABLE</strong> to call to</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNROUTABLE</strong> when called</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#valid_sender/0">valid_sender()</a>
+    <a href="#valid_caller_id/0">valid_caller_id()</a>
   </div>
   
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>VALID</strong> to call from</p>
@@ -214,14 +214,14 @@
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to call to.</p>
+    <p>Returns the magic phone number which is <strong>BLACKLISTED</strong> such that your account cannot call it.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21216">21216</a> API error from Twilio.</p>
 <h2 id="blacklisted_recipient/0-example" class="section-heading">
   <a href="#blacklisted_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.blacklisted_recipient())
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.blacklisted_recipient())
 iex&gt; Map.get(map, :code)
 21216</code></pre>
 
@@ -246,8 +246,8 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>All other phone numbers, even ones owned by your production credentials, will return an error when used to call from.</p>
-<p>(Other numbers are not verified on your test credentials.)</p>
+    <p>All other phone numbers will return an error when calling from them.</p>
+<p>(Other numbers are not verified for your account with your test credentials.)</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21210">21210</a> API error from Twilio.</p>
 <h2 id="from_other/1-example" class="section-heading">
   <a href="#from_other/1-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -279,16 +279,48 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which has <strong>GEO PERMISSION ERRORS</strong> to call to.</p>
+    <p>Returns the magic phone number which returns a <strong>GEO PERMISSION ERROR</strong> when called.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21215">21215</a> API error from Twilio.</p>
 <h2 id="geo_blocked_recipient/0-example" class="section-heading">
   <a href="#geo_blocked_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.geo_blocked_recipient())
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.geo_blocked_recipient())
 iex&gt; Map.get(map, :code)
 21215</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="invalid_caller_id/0">
+  
+  
+  <div class="detail-header">
+    <a href="#invalid_caller_id/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">invalid_caller_id()</span>
+    
+      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L19" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns the magic phone number which is <strong>INVALID</strong> to call from.</p>
+<p>Expect the <a href="https://www.twilio.com/docs/errors/21212">21212</a> API error from Twilio.</p>
+<h2 id="invalid_caller_id/0-example" class="section-heading">
+  <a href="#invalid_caller_id/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Example
+</h2>
+
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.invalid_caller_id(), to: TwilioMagicValues.Calling.to_other(&quot;+17148675309&quot;))
+iex&gt; Map.get(map, :code)
+21212</code></pre>
 
   </section>
 </div>
@@ -311,48 +343,16 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>INVALID</strong> to call to.</p>
+    <p>Returns the magic phone number which is <strong>INVALID</strong> to call.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21217">21217</a> API error from Twilio.</p>
 <h2 id="invalid_recipient/0-example" class="section-heading">
   <a href="#invalid_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.invalid_recipient())
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.invalid_recipient())
 iex&gt; Map.get(map, :code)
 21217</code></pre>
-
-  </section>
-</div>
-<div class="detail" id="invalid_sender/0">
-  
-  
-  <div class="detail-header">
-    <a href="#invalid_sender/0" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">invalid_sender()</span>
-    
-      <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L19" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Returns the magic phone number which is <strong>INVALID</strong> to call from.</p>
-<p>Expect the <a href="https://www.twilio.com/docs/errors/21212">21212</a> API error from Twilio.</p>
-<h2 id="invalid_sender/0-example" class="section-heading">
-  <a href="#invalid_sender/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  Example
-</h2>
-
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.invalid_sender(), to: TwilioMagicValues.Calling.to_other(&quot;+17148675309&quot;))
-iex&gt; Map.get(map, :code)
-21212</code></pre>
 
   </section>
 </div>
@@ -399,28 +399,28 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>UNROUTABLE</strong> to call to.</p>
+    <p>Returns the magic phone number which is <strong>UNROUTABLE</strong> when called.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21214">21214</a> API error from Twilio.</p>
 <h2 id="unroutable_recipient/0-example" class="section-heading">
   <a href="#unroutable_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.unroutable_recipient())
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.unroutable_recipient())
 iex&gt; Map.get(map, :code)
 21214</code></pre>
 
   </section>
 </div>
-<div class="detail" id="valid_sender/0">
+<div class="detail" id="valid_caller_id/0">
   
   
   <div class="detail-header">
-    <a href="#valid_sender/0" class="detail-link" title="Link to this function">
+    <a href="#valid_caller_id/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">valid_sender()</span>
+    <span class="signature">valid_caller_id()</span>
     
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/calling.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -433,12 +433,12 @@ iex&gt; Map.get(map, :code)
   <section class="docstring">
     <p>Returns the magic phone number which is <strong>VALID</strong> to call from.</p>
 <p>Expect no error.</p>
-<h2 id="valid_sender/0-example" class="section-heading">
-  <a href="#valid_sender/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+<h2 id="valid_caller_id/0-example" class="section-heading">
+  <a href="#valid_caller_id/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.to_other(&quot;+17148675309&quot;))
+<pre><code class="iex elixir">iex&gt; map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.to_other(&quot;+17148675309&quot;))
 iex&gt; Map.get(map, :code, &quot;There is no error code&quot;)
 &quot;There is no error code&quot;
 iex&gt; Map.get(map, :from_formatted)

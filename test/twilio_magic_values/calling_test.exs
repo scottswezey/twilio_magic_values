@@ -3,10 +3,10 @@ defmodule TwilioMagicValues.CallingTest do
   doctest TwilioMagicValues.Calling
   alias TwilioMagicValues.Calling, as: Magic
 
-  test "invalid_sender" do
+  test "invalid_caller_id" do
     results =
       make_call(
-        from: Magic.invalid_sender(),
+        from: Magic.invalid_caller_id(),
         to: Magic.to_other("+17148675309")
       )
 
@@ -14,10 +14,10 @@ defmodule TwilioMagicValues.CallingTest do
     assert results.code == 21212
   end
 
-  test "valid_sender" do
+  test "valid_caller_id" do
     results =
       make_call(
-        from: Magic.valid_sender(),
+        from: Magic.valid_caller_id(),
         to: Magic.to_other("+17148675309")
       )
 
@@ -28,7 +28,7 @@ defmodule TwilioMagicValues.CallingTest do
   test "invalid_recipient" do
     results =
       make_call(
-        from: Magic.valid_sender(),
+        from: Magic.valid_caller_id(),
         to: Magic.invalid_recipient()
       )
 
@@ -39,7 +39,7 @@ defmodule TwilioMagicValues.CallingTest do
   test "unroutable_recipient" do
     results =
       make_call(
-        from: Magic.valid_sender(),
+        from: Magic.valid_caller_id(),
         to: Magic.unroutable_recipient()
       )
 
@@ -50,7 +50,7 @@ defmodule TwilioMagicValues.CallingTest do
   test "geo_blocked_recipient" do
     results =
       make_call(
-        from: Magic.valid_sender(),
+        from: Magic.valid_caller_id(),
         to: Magic.geo_blocked_recipient()
       )
 
@@ -61,7 +61,7 @@ defmodule TwilioMagicValues.CallingTest do
   test "blacklisted_recipient" do
     results =
       make_call(
-        from: Magic.valid_sender(),
+        from: Magic.valid_caller_id(),
         to: Magic.blacklisted_recipient()
       )
 

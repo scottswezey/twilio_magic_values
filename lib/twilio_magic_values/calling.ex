@@ -12,11 +12,11 @@ defmodule TwilioMagicValues.Calling do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Calling.invalid_sender(), to: TwilioMagicValues.Calling.to_other("+17148675309"))
+      iex> map = make_call(from: TwilioMagicValues.Calling.invalid_caller_id(), to: TwilioMagicValues.Calling.to_other("+17148675309"))
       iex> Map.get(map, :code)
       21212
   """
-  def invalid_sender, do: "+15005550001"
+  def invalid_caller_id, do: "+15005550001"
 
   @doc """
   Returns the magic phone number which is **VALID** to call from.
@@ -25,18 +25,18 @@ defmodule TwilioMagicValues.Calling do
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.to_other("+17148675309"))
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.to_other("+17148675309"))
       iex> Map.get(map, :code, "There is no error code")
       "There is no error code"
       iex> Map.get(map, :from_formatted)
       "(500) 555-0006"
   """
-  def valid_sender, do: "+15005550006"
+  def valid_caller_id, do: "+15005550006"
 
   @doc """
-  All other phone numbers, even ones owned by your production credentials, will return an error when used to call from.
+  All other phone numbers will return an error when calling from them.
 
-  (Other numbers are not verified on your test credentials.)
+  (Other numbers are not verified for your account with your test credentials.)
 
   Expect the [21210](https://www.twilio.com/docs/errors/21210) API error from Twilio.
 
@@ -49,52 +49,52 @@ defmodule TwilioMagicValues.Calling do
   def from_other(phone_number), do: phone_number
 
   @doc """
-  Returns the magic phone number which is **INVALID** to call to.
+  Returns the magic phone number which is **INVALID** to call.
 
   Expect the [21217](https://www.twilio.com/docs/errors/21217) API error from Twilio.
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.invalid_recipient())
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.invalid_recipient())
       iex> Map.get(map, :code)
       21217
   """
   def invalid_recipient, do: "+15005550001"
 
   @doc """
-  Returns the magic phone number which is **UNROUTABLE** to call to.
+  Returns the magic phone number which is **UNROUTABLE** when called.
 
   Expect the [21214](https://www.twilio.com/docs/errors/21214) API error from Twilio.
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.unroutable_recipient())
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.unroutable_recipient())
       iex> Map.get(map, :code)
       21214
   """
   def unroutable_recipient, do: "+15005550002"
 
   @doc """
-  Returns the magic phone number which has **GEO PERMISSION ERRORS** to call to.
+  Returns the magic phone number which returns a **GEO PERMISSION ERROR** when called.
 
   Expect the [21215](https://www.twilio.com/docs/errors/21215) API error from Twilio.
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.geo_blocked_recipient())
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.geo_blocked_recipient())
       iex> Map.get(map, :code)
       21215
   """
   def geo_blocked_recipient, do: "+15005550003"
 
   @doc """
-  Returns the magic phone number which is **BLACKLISTED** to call to.
+  Returns the magic phone number which is **BLACKLISTED** such that your account cannot call it.
 
   Expect the [21216](https://www.twilio.com/docs/errors/21216) API error from Twilio.
 
   ## Example
 
-      iex> map = make_call(from: TwilioMagicValues.Calling.valid_sender(), to: TwilioMagicValues.Calling.blacklisted_recipient())
+      iex> map = make_call(from: TwilioMagicValues.Calling.valid_caller_id(), to: TwilioMagicValues.Calling.blacklisted_recipient())
       iex> Map.get(map, :code)
       21216
   """

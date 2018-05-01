@@ -24,13 +24,13 @@ end
 ### Examples:
 
 - Instead of testing sending a message to `+15005550004`, use: `TwilioMagicValues.Messaging.blacklisted_recipient/1`.
-- Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Calling.invalid_sender/1`.
+- Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Calling.invalid_caller_id/1`.
 - Instead of testing a purchase for `+15005550000`, use: `TwilioMagicValues.NumberPurchasing.unavailable_phone_number/1`.
 
 ### Pseudocode examples
 ```elixir
 alias TwilioMagicValues.Calling
-make_test_call(from: Calling.valid_sender(),
+make_test_call(from: Calling.valid_caller_id(),
                to: Calling.invalid_recipient(),
                ...)
 ```
