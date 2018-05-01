@@ -8,7 +8,7 @@ defmodule TwilioMagicValues.Call do
   @doc """
   Returns the magic phone number which is **INVALID** to call from.
 
-  Expect the 21212 API error from Twilio.
+  Expect the [21212](https://www.twilio.com/docs/errors/21212) API error from Twilio.
   """
   def invalid_sender, do: "+15005550001"
 
@@ -24,35 +24,35 @@ defmodule TwilioMagicValues.Call do
 
   (Other numbers are not verified on your test credentials.)
 
-  Expect the 21210 API error from Twilio.
+  Expect the [21210](https://www.twilio.com/docs/errors/21210) API error from Twilio.
   """
   def from_other(phone_number), do: phone_number
 
   @doc """
   Returns the magic phone number which is **INVALID** to call to.
 
-  Expect the 21217 API error from Twilio.
+  Expect the [21217](https://www.twilio.com/docs/errors/21217) API error from Twilio.
   """
   def invalid_recipient, do: "+15005550001"
 
   @doc """
   Returns the magic phone number which is **UNROUTABLE** to call to.
 
-  Expect the 21214 API error from Twilio.
+  Expect the [21214](https://www.twilio.com/docs/errors/21214) API error from Twilio.
   """
   def unroutable_recipient, do: "+15005550002"
 
   @doc """
   Returns the magic phone number which has **GEO PERMISSION ERRORS** to call to.
 
-  Expect the 21215 API error from Twilio.
+  Expect the [21215](https://www.twilio.com/docs/errors/21215) API error from Twilio.
   """
   def geo_blocked_recipient, do: "+15005550003"
 
   @doc """
   Returns the magic phone number which is **BLACKLISTED** to call to.
 
-  Expect the 21216 API error from Twilio.
+  Expect the [21216](https://www.twilio.com/docs/errors/21216) API error from Twilio.
   """
   def blacklisted_recipient, do: "+15005550004"
 
