@@ -108,7 +108,7 @@
     <a href="#blacklisted_recipient/0">blacklisted_recipient()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to send a message to</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>BLACKLISTED</strong> such that your account cannot send a message to it</p>
 </div>
   
 </div>
@@ -117,7 +117,7 @@
     <a href="#cant_receive_sms/0">cant_receive_sms()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>DOESNT SUPPORT SMS</strong> to send a message to</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which <strong>DOESNT SUPPORT RECEIVING SMS MESSAGES</strong></p>
 </div>
   
 </div>
@@ -126,7 +126,7 @@
     <a href="#geo_blocked_recipient/0">geo_blocked_recipient()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which has a <strong>GEO PERMISSION ERROR</strong> to send a message to</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which returns a <strong>GEO PERMISSION ERROR</strong> when sent an SMS message</p>
 </div>
   
 </div>
@@ -135,7 +135,7 @@
     <a href="#invalid_recipient/0">invalid_recipient()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to send a message to</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> and cannot receive SMS messages</p>
 </div>
   
 </div>
@@ -144,7 +144,7 @@
     <a href="#invalid_sender/0">invalid_sender()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> to send SMS from</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> as an SMS sender</p>
 </div>
   
 </div>
@@ -153,7 +153,7 @@
     <a href="#sender_cant_send_sms/0">sender_cant_send_sms()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>CANT SEND SMS</strong> to send SMS from</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>CANT SEND SMS</strong></p>
 </div>
   
 </div>
@@ -162,7 +162,7 @@
     <a href="#sender_queue_full/0">sender_queue_full()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which has <strong>A FULL QUEUE</strong> to send SMS from</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which has a <strong>FULL OUTGOING SMS QUEUE</strong></p>
 </div>
   
 </div>
@@ -180,7 +180,7 @@
     <a href="#unowned_number/0">unowned_number()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>NOT VERIFIED BY YOUR ACCOUNT</strong> to send SMS from</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>NOT VERIFIED OR OWNED BY YOUR ACCOUNT</strong> and cannot be used as an SMS sender</p>
 </div>
   
 </div>
@@ -189,7 +189,7 @@
     <a href="#unroutable_recipient/0">unroutable_recipient()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNROUTABLE</strong> to send a message to</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNROUTABLE</strong> and cannot receive SMS messages</p>
 </div>
   
 </div>
@@ -198,7 +198,7 @@
     <a href="#valid_sender/0">valid_sender()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>VALID</strong> to send SMS from</p>
+    <div class="summary-synopsis"><p>Returns the magic phone number which can send SMS messages</p>
 </div>
   
 </div>
@@ -241,7 +241,7 @@
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>BLACKLISTED</strong> to send a message to.</p>
+    <p>Returns the magic phone number which is <strong>BLACKLISTED</strong> such that your account cannot send a message to it.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21610">21610</a> API error from Twilio.</p>
 <h2 id="blacklisted_recipient/0-example" class="section-heading">
   <a href="#blacklisted_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -273,7 +273,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>DOESNT SUPPORT SMS</strong> to send a message to.</p>
+    <p>Returns the magic phone number which <strong>DOESNT SUPPORT RECEIVING SMS MESSAGES</strong>.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21614">21614</a> API error from Twilio.</p>
 <h2 id="cant_receive_sms/0-example" class="section-heading">
   <a href="#cant_receive_sms/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -305,7 +305,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which has a <strong>GEO PERMISSION ERROR</strong> to send a message to.</p>
+    <p>Returns the magic phone number which returns a <strong>GEO PERMISSION ERROR</strong> when sent an SMS message.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21408">21408</a> API error from Twilio.</p>
 <h2 id="geo_blocked_recipient/0-example" class="section-heading">
   <a href="#geo_blocked_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -337,7 +337,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>INVALID</strong> to send a message to.</p>
+    <p>Returns the magic phone number which is <strong>INVALID</strong> and cannot receive SMS messages.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21211">21211</a> API error from Twilio.</p>
 <h2 id="invalid_recipient/0-example" class="section-heading">
   <a href="#invalid_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -369,7 +369,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>INVALID</strong> to send SMS from.</p>
+    <p>Returns the magic phone number which is <strong>INVALID</strong> as an SMS sender.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21212">21212</a> API error from Twilio.</p>
 <h2 id="invalid_sender/0-example" class="section-heading">
   <a href="#invalid_sender/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -401,7 +401,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>CANT SEND SMS</strong> to send SMS from.</p>
+    <p>Returns the magic phone number which is <strong>CANT SEND SMS</strong>.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21606">21606</a> API error from Twilio.</p>
 <h2 id="sender_cant_send_sms/0-example" class="section-heading">
   <a href="#sender_cant_send_sms/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -433,7 +433,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which has <strong>A FULL QUEUE</strong> to send SMS from.</p>
+    <p>Returns the magic phone number which has a <strong>FULL OUTGOING SMS QUEUE</strong>.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21611">21611</a> API error from Twilio.</p>
 <h2 id="sender_queue_full/0-example" class="section-heading">
   <a href="#sender_queue_full/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -489,7 +489,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>NOT VERIFIED BY YOUR ACCOUNT</strong> to send SMS from.</p>
+    <p>Returns the magic phone number which is <strong>NOT VERIFIED OR OWNED BY YOUR ACCOUNT</strong> and cannot be used as an SMS sender.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21606">21606</a> API error from Twilio.</p>
 <h2 id="unowned_number/0-example" class="section-heading">
   <a href="#unowned_number/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -521,7 +521,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>UNROUTABLE</strong> to send a message to.</p>
+    <p>Returns the magic phone number which is <strong>UNROUTABLE</strong> and cannot receive SMS messages.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21612">21612</a> API error from Twilio.</p>
 <h2 id="unroutable_recipient/0-example" class="section-heading">
   <a href="#unroutable_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
@@ -553,7 +553,7 @@ iex&gt; Map.get(map, :code)
     
   </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>VALID</strong> to send SMS from.</p>
+    <p>Returns the magic phone number which can send SMS messages.</p>
 <p>Expect no error.</p>
 <h2 id="valid_sender/0-example" class="section-heading">
   <a href="#valid_sender/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
