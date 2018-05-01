@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.3">
-    <title>API Reference – Twilio Magic Values v0.4.0</title>
+    <title>Contributing – Twilio Magic Values v0.4.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
     <script src="dist/sidebar_items-76e6f099b3.js"></script>
@@ -68,48 +68,31 @@
     <div id="content" class="content-inner">
 
 
-<h1>
-  <small class="visible-xs">Twilio Magic Values v0.4.0</small>
-  API Reference
-</h1>
-
-
-  <section class="details-list">
-    <h2 id="modules" class="section-heading">
-  <a href="#modules" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
-  Modules
+<h1>Guidelines for Contributing</h1>
+<h2 id="github" class="section-heading">
+  <a href="#github" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  GitHub
 </h2>
 
-    <div class="summary">
-      <div class="summary-row">
-  <div class="summary-signature"><a href="TwilioMagicValues.Calling.html">TwilioMagicValues.Calling</a></div>
-  
-    <div class="summary-synopsis"><p>Wrapper for Twilio magic phone numbers used in tests making calls</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="TwilioMagicValues.Messaging.html">TwilioMagicValues.Messaging</a></div>
-  
-    <div class="summary-synopsis"><p>Wrapper for Twilio magic phone numbers used in tests sending SMS messages</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="TwilioMagicValues.NumberPurchasing.html">TwilioMagicValues.NumberPurchasing</a></div>
-  
-    <div class="summary-synopsis"><p>Wrapper for Twilio magic phone numbers used in tests buying phone numbers</p>
-</div>
-  
-</div>
+<ul>
+<li>Issues and pull requests are welcome on <a href="https://github.com/scottswezey/twilio_magic_values">GitHub</a>.
+</li>
+<li>Twilio doesn’t currently provide magic numbers for other parts of their APIs. If there is something they add new, or a magic number they offer which is otherwise missing from this project, please open an issue or pull request.
+</li>
+</ul>
+<h2 id="code" class="section-heading">
+  <a href="#code" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Code
+</h2>
 
-    </div>
-  </section>
-
-
-
-
-
+<ul>
+<li>Please run <code class="inline">mix format</code> before committing.
+</li>
+<li>Ensure tests pass before committing. You will need to copy <code class="inline">config/test.secret.exs.sample</code> to <code class="inline">config/test.secret.exs</code> and add your own <a href="https://www.twilio.com/console/account/settings">testing credentials</a> from Twilio.
+</li>
+<li>Do not bump the version number in your pull requests.
+</li>
+</ul>
 
       <footer class="footer">
         <p>
