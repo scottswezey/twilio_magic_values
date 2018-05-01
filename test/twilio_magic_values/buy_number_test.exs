@@ -41,23 +41,26 @@ defmodule TwilioMagicValues.BuyNumberTest do
   end
 
   defp buy_number(exactly: num) do
-    headers = []
-    options = [hackney: [basic_auth: {api_test_sid(), api_auth_token()}]]
-    post_data = {:form, [{"PhoneNumber", num}]}
-
-    {:ok, %HTTPoison.Response{} = resp} = HTTPoison.post(api_url(), post_data, headers, options)
-
-    Poison.Parser.parse!(resp.body, keys: :atoms)
+    get_http_response([{"PhoneNumber", num}])
+    |> Map.get(:body)
+    |> Poison.Parser.parse!(keys: :atoms)
   end
 
   defp buy_number(area_code: num) do
+    get_http_response([{"AreaCode", num}])
+    |> Map.get(:body)
+    |> Poison.Parser.parse!(keys: :atoms)
+  end
+
+  defp get_http_response(form_args) do
     headers = []
     options = [hackney: [basic_auth: {api_test_sid(), api_auth_token()}]]
-    post_data = {:form, [{"AreaCode", num}]}
+    post_data = {:form, form_args}
 
-    {:ok, %HTTPoison.Response{} = resp} = HTTPoison.post(api_url(), post_data, headers, options)
+    {:ok, %HTTPoison.Response{} = response} =
+      HTTPoison.post(api_url(), post_data, headers, options)
 
-    Poison.Parser.parse!(resp.body, keys: :atoms)
+    response
   end
 
   defp api_test_sid do

@@ -72,15 +72,20 @@ defmodule TwilioMagicValues.CallTest do
   end
 
   defp make_call(from: f, to: t) do
+    get_http_response([{"To", t}, {"From", f}, {"Url", "http://demo.twilio.com/docs/voice.xml"}])
+    |> Map.get(:body)
+    |> Poison.Parser.parse!(keys: :atoms)
+  end
+
+  defp get_http_response(form_args) do
     headers = []
     options = [hackney: [basic_auth: {api_test_sid(), api_auth_token()}]]
+    post_data = {:form, form_args}
 
-    post_data =
-      {:form, [{"To", t}, {"From", f}, {"Url", "http://demo.twilio.com/docs/voice.xml"}]}
+    {:ok, %HTTPoison.Response{} = response} =
+      HTTPoison.post(api_url(), post_data, headers, options)
 
-    {:ok, %HTTPoison.Response{} = resp} = HTTPoison.post(api_url(), post_data, headers, options)
-
-    Poison.Parser.parse!(resp.body, keys: :atoms)
+    response
   end
 
   defp api_test_sid do

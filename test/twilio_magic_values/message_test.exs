@@ -116,13 +116,28 @@ defmodule TwilioMagicValues.MessageTest do
   end
 
   defp send_message(from: f, to: t) do
+    # headers = []
+    # options = [hackney: [basic_auth: {api_test_sid(), api_auth_token()}]]
+    # post_data = {:form, [{"To", t}, {"From", f}, {"Body", "Hello%20world"}]}
+    #
+    # {:ok, %HTTPoison.Response{} = resp} = HTTPoison.post(api_url(), post_data, headers, options)
+    #
+    # Poison.Parser.parse!(resp.body, keys: :atoms)
+
+    get_http_response([{"To", t}, {"From", f}, {"Body", "Hello%20world"}])
+    |> Map.get(:body)
+    |> Poison.Parser.parse!(keys: :atoms)
+  end
+
+  defp get_http_response(form_args) do
     headers = []
     options = [hackney: [basic_auth: {api_test_sid(), api_auth_token()}]]
-    post_data = {:form, [{"To", t}, {"From", f}, {"Body", "Hello%20world"}]}
+    post_data = {:form, form_args}
 
-    {:ok, %HTTPoison.Response{} = resp} = HTTPoison.post(api_url(), post_data, headers, options)
+    {:ok, %HTTPoison.Response{} = response} =
+      HTTPoison.post(api_url(), post_data, headers, options)
 
-    Poison.Parser.parse!(resp.body, keys: :atoms)
+    response
   end
 
   defp api_test_sid do
