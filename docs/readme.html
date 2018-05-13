@@ -87,8 +87,6 @@ end</code></pre>
 <ul>
 <li>This project is only needed for the <code class="inline">test</code> environment.
 </li>
-<li>After version <code class="inline">1.0.0</code>, the project will follow <a href="https://semver.org">SEMVER</a> 2.0.
-</li>
 <li>Don’t forget to run <code class="inline">mix deps.get</code>.
 </li>
 </ul>
@@ -122,12 +120,15 @@ end</code></pre>
 </h3>
 
 <pre><code class="elixir">alias TwilioMagicValues.Calling
+
 make_test_call(from: Calling.valid_caller_id(),
                to: Calling.invalid_recipient(),
                ...)</code></pre>
 <pre><code class="elixir">alias TwilioMagicValues.NumberPurchasing
+
 buy_test_number(exactly: NumberPurchasing.valid_phone_number())</code></pre>
 <pre><code class="elixir">alias TwilioMagicValues.Messaging
+
 send_test_message(from: Messaging.valid_sender(),
                   to: Messaging.cant_receive_sms(),
                   ...)</code></pre>
