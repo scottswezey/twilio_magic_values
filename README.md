@@ -29,16 +29,19 @@ end
 ### Pseudocode examples
 ```elixir
 alias TwilioMagicValues.Calling
+
 make_test_call(from: Calling.valid_caller_id(),
                to: Calling.invalid_recipient(),
                ...)
 ```
 ```elixir
 alias TwilioMagicValues.NumberPurchasing
+
 buy_test_number(exactly: NumberPurchasing.valid_phone_number())
 ```
 ```elixir
 alias TwilioMagicValues.Messaging
+
 send_test_message(from: Messaging.valid_sender(),
                   to: Messaging.cant_receive_sms(),
                   ...)
