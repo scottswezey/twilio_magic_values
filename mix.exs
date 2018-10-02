@@ -27,7 +27,8 @@ defmodule TwilioMagicValues.MixProject do
       homepage_url: "https://scottswezey.github.io/twilio_magic_values",
       docs: [
         main: "readme",
-        extras: ["README.md": [title: "Readme"], "CONTRIBUTING.md": [title: "Contributing"]]
+        extras: ["README.md": [title: "Readme"], "CONTRIBUTING.md": [title: "Contributing"]],
+        output: "docs"
       ]
     ]
   end
