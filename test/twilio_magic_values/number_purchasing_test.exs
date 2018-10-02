@@ -43,7 +43,7 @@ defmodule TwilioMagicValues.NumberPurchasingTest do
 
     resp
     |> Map.get(:body)
-    |> Poison.Parser.parse!(keys: :atoms)
+    |> Poison.Parser.parse!(%{keys: :atoms})
   end
 
   defp buy_number(area_code: num) do
@@ -51,7 +51,7 @@ defmodule TwilioMagicValues.NumberPurchasingTest do
 
     resp
     |> Map.get(:body)
-    |> Poison.Parser.parse!(keys: :atoms)
+    |> Poison.Parser.parse!(%{keys: :atoms})
   end
 
   defp get_http_response(form_args) do
