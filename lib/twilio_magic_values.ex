@@ -1,7 +1,7 @@
 defmodule TwilioMagicValues do
   @moduledoc false
 
-  @type phone_number :: String.t
+  @type phone_number :: String.t()
   @type t :: phone_number
 
   @doc """
