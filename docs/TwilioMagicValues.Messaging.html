@@ -1,22 +1,17 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.18.3">
+    <meta name="generator" content="ExDoc v0.19.1">
     <title>TwilioMagicValues.Messaging – Twilio Magic Values v1.0.0-beta1</title>
-    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
-    
+    <link rel="stylesheet" href="dist/app-240d7fc7e5.css" />
     <script src="dist/sidebar_items-93a7b39cb2.js"></script>
-    
-    
-    
     
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
-
     <div class="main">
 <button class="sidebar-button sidebar-toggle">
   <span class="icon-menu" aria-hidden="true"></span>
@@ -28,17 +23,14 @@
 </button>
 <section class="sidebar">
 
-  
   <a href="https://scottswezey.github.io/twilio_magic_values" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        Twilio Magic Values
-      </h1>
+Twilio Magic Values      </h1>
       <h2 class="sidebar-projectVersion">
         v1.0.0-beta1
       </h2>
     </div>
-    
   </a>
 
   <form class="sidebar-search" action="search.html">
@@ -51,13 +43,9 @@
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -70,24 +58,19 @@
 
       <h1>
         <small class="visible-xs">Twilio Magic Values v1.0.0-beta1</small>
-        TwilioMagicValues.Messaging
-        
+TwilioMagicValues.Messaging        
           <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
-        
       </h1>
 
-      
+
         <section id="moduledoc">
-          <p>Wrapper for Twilio magic phone numbers used in tests sending SMS messages.</p>
+<p>Wrapper for Twilio magic phone numbers used in tests sending SMS messages.</p>
 <p>See: <a href="https://www.twilio.com/docs/iam/test-credentials#test-sms-messages">https://www.twilio.com/docs/iam/test-credentials#test-sms-messages</a></p>
-
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
@@ -97,123 +80,93 @@
             Summary
           </h1>
           
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#blacklisted_recipient/0">blacklisted_recipient()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>BLACKLISTED</strong> such that your account cannot send a message to it</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#cant_receive_sms/0">cant_receive_sms()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which <strong>DOESNT SUPPORT RECEIVING SMS MESSAGES</strong></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#geo_blocked_recipient/0">geo_blocked_recipient()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which returns a <strong>GEO PERMISSION ERROR</strong> when sent an SMS message</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#invalid_recipient/0">invalid_recipient()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> and cannot receive SMS messages</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#invalid_sender/0">invalid_sender()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> as an SMS sender</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#sender_cant_send_sms/0">sender_cant_send_sms()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>CANT SEND SMS</strong></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#sender_queue_full/0">sender_queue_full()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which has a <strong>FULL OUTGOING SMS QUEUE</strong></p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#to_other/1">to_other(phone_number)</a>
   </div>
-  
     <div class="summary-synopsis"><p>All other phone numbers are potentially valid and are verified normally</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#unowned_number/0">unowned_number()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>NOT VERIFIED OR OWNED BY YOUR ACCOUNT</strong> and cannot be used as an SMS sender</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#unroutable_recipient/0">unroutable_recipient()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNROUTABLE</strong> and cannot receive SMS messages</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#valid_sender/0">valid_sender()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which can send SMS messages</p>
 </div>
-  
 </div>
-
   </div>
-
-
           
-
         </section>
-      
 
-      
 
-      
+
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
@@ -222,368 +175,288 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="blacklisted_recipient/0">
-  
-  
-  <div class="detail-header">
+<div class="detail" id="blacklisted_recipient/0">
+    <div class="detail-header">
     <a href="#blacklisted_recipient/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">blacklisted_recipient()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L127" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>BLACKLISTED</strong> such that your account cannot send a message to it.</p>
+<p>Returns the magic phone number which is <strong>BLACKLISTED</strong> such that your account cannot send a message to it.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21610">21610</a> API error from Twilio.</p>
 <h2 id="blacklisted_recipient/0-example" class="section-heading">
   <a href="#blacklisted_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.blacklisted_recipient())
-iex&gt; Map.get(map, :code)
-21610</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="1283652330-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">valid_sender</span><span class="p" data-group-id="1283652330-2">(</span><span class="p" data-group-id="1283652330-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">blacklisted_recipient</span><span class="p" data-group-id="1283652330-3">(</span><span class="p" data-group-id="1283652330-3">)</span><span class="p" data-group-id="1283652330-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="1283652330-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="1283652330-4">)</span><span class="w">
+</span><span class="mi">21610</span></code></pre>
   </section>
 </div>
 <div class="detail" id="cant_receive_sms/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#cant_receive_sms/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">cant_receive_sms()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L140" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which <strong>DOESNT SUPPORT RECEIVING SMS MESSAGES</strong>.</p>
+<p>Returns the magic phone number which <strong>DOESNT SUPPORT RECEIVING SMS MESSAGES</strong>.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21614">21614</a> API error from Twilio.</p>
 <h2 id="cant_receive_sms/0-example" class="section-heading">
   <a href="#cant_receive_sms/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.cant_receive_sms())
-iex&gt; Map.get(map, :code)
-21614</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="5014762339-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">valid_sender</span><span class="p" data-group-id="5014762339-2">(</span><span class="p" data-group-id="5014762339-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">cant_receive_sms</span><span class="p" data-group-id="5014762339-3">(</span><span class="p" data-group-id="5014762339-3">)</span><span class="p" data-group-id="5014762339-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="5014762339-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="5014762339-4">)</span><span class="w">
+</span><span class="mi">21614</span></code></pre>
   </section>
 </div>
 <div class="detail" id="geo_blocked_recipient/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#geo_blocked_recipient/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">geo_blocked_recipient()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L114" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which returns a <strong>GEO PERMISSION ERROR</strong> when sent an SMS message.</p>
+<p>Returns the magic phone number which returns a <strong>GEO PERMISSION ERROR</strong> when sent an SMS message.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21408">21408</a> API error from Twilio.</p>
 <h2 id="geo_blocked_recipient/0-example" class="section-heading">
   <a href="#geo_blocked_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.geo_blocked_recipient())
-iex&gt; Map.get(map, :code)
-21408</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="7354743572-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">valid_sender</span><span class="p" data-group-id="7354743572-2">(</span><span class="p" data-group-id="7354743572-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">geo_blocked_recipient</span><span class="p" data-group-id="7354743572-3">(</span><span class="p" data-group-id="7354743572-3">)</span><span class="p" data-group-id="7354743572-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="7354743572-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="7354743572-4">)</span><span class="w">
+</span><span class="mi">21408</span></code></pre>
   </section>
 </div>
 <div class="detail" id="invalid_recipient/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#invalid_recipient/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">invalid_recipient()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L88" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>INVALID</strong> and cannot receive SMS messages.</p>
+<p>Returns the magic phone number which is <strong>INVALID</strong> and cannot receive SMS messages.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21211">21211</a> API error from Twilio.</p>
 <h2 id="invalid_recipient/0-example" class="section-heading">
   <a href="#invalid_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.invalid_recipient())
-iex&gt; Map.get(map, :code)
-21211</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="9867193876-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">valid_sender</span><span class="p" data-group-id="9867193876-2">(</span><span class="p" data-group-id="9867193876-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">invalid_recipient</span><span class="p" data-group-id="9867193876-3">(</span><span class="p" data-group-id="9867193876-3">)</span><span class="p" data-group-id="9867193876-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="9867193876-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="9867193876-4">)</span><span class="w">
+</span><span class="mi">21211</span></code></pre>
   </section>
 </div>
 <div class="detail" id="invalid_sender/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#invalid_sender/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">invalid_sender()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L19" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>INVALID</strong> as an SMS sender.</p>
+<p>Returns the magic phone number which is <strong>INVALID</strong> as an SMS sender.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21212">21212</a> API error from Twilio.</p>
 <h2 id="invalid_sender/0-example" class="section-heading">
   <a href="#invalid_sender/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.invalid_sender(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
-iex&gt; Map.get(map, :code)
-21212</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="1637139198-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">invalid_sender</span><span class="p" data-group-id="1637139198-2">(</span><span class="p" data-group-id="1637139198-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">to_other</span><span class="p" data-group-id="1637139198-3">(</span><span class="s">&quot;+17148673509&quot;</span><span class="p" data-group-id="1637139198-3">)</span><span class="p" data-group-id="1637139198-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="1637139198-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="1637139198-4">)</span><span class="w">
+</span><span class="mi">21212</span></code></pre>
   </section>
 </div>
 <div class="detail" id="sender_cant_send_sms/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#sender_cant_send_sms/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">sender_cant_send_sms()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L45" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>CANT SEND SMS</strong>.</p>
+<p>Returns the magic phone number which is <strong>CANT SEND SMS</strong>.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21606">21606</a> API error from Twilio.</p>
 <h2 id="sender_cant_send_sms/0-example" class="section-heading">
   <a href="#sender_cant_send_sms/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.sender_cant_send_sms(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
-iex&gt; Map.get(map, :code)
-21606</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="9897782494-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">sender_cant_send_sms</span><span class="p" data-group-id="9897782494-2">(</span><span class="p" data-group-id="9897782494-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">to_other</span><span class="p" data-group-id="9897782494-3">(</span><span class="s">&quot;+17148673509&quot;</span><span class="p" data-group-id="9897782494-3">)</span><span class="p" data-group-id="9897782494-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="9897782494-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="9897782494-4">)</span><span class="w">
+</span><span class="mi">21606</span></code></pre>
   </section>
 </div>
 <div class="detail" id="sender_queue_full/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#sender_queue_full/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">sender_queue_full()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L58" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which has a <strong>FULL OUTGOING SMS QUEUE</strong>.</p>
+<p>Returns the magic phone number which has a <strong>FULL OUTGOING SMS QUEUE</strong>.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21611">21611</a> API error from Twilio.</p>
 <h2 id="sender_queue_full/0-example" class="section-heading">
   <a href="#sender_queue_full/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.sender_queue_full(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
-iex&gt; Map.get(map, :code)
-21611</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="1216595135-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">sender_queue_full</span><span class="p" data-group-id="1216595135-2">(</span><span class="p" data-group-id="1216595135-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">to_other</span><span class="p" data-group-id="1216595135-3">(</span><span class="s">&quot;+17148673509&quot;</span><span class="p" data-group-id="1216595135-3">)</span><span class="p" data-group-id="1216595135-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="1216595135-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="1216595135-4">)</span><span class="w">
+</span><span class="mi">21611</span></code></pre>
   </section>
 </div>
 <div class="detail" id="to_other/1">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#to_other/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">to_other(phone_number)</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L147" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>All other phone numbers are potentially valid and are verified normally.</p>
+<p>All other phone numbers are potentially valid and are verified normally.</p>
 <p>Errors are dependent on input.</p>
-
   </section>
 </div>
 <div class="detail" id="unowned_number/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#unowned_number/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">unowned_number()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>NOT VERIFIED OR OWNED BY YOUR ACCOUNT</strong> and cannot be used as an SMS sender.</p>
+<p>Returns the magic phone number which is <strong>NOT VERIFIED OR OWNED BY YOUR ACCOUNT</strong> and cannot be used as an SMS sender.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21606">21606</a> API error from Twilio.</p>
 <h2 id="unowned_number/0-example" class="section-heading">
   <a href="#unowned_number/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.unowned_number(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
-iex&gt; Map.get(map, :code)
-21606</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="8231140248-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">unowned_number</span><span class="p" data-group-id="8231140248-2">(</span><span class="p" data-group-id="8231140248-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">to_other</span><span class="p" data-group-id="8231140248-3">(</span><span class="s">&quot;+17148673509&quot;</span><span class="p" data-group-id="8231140248-3">)</span><span class="p" data-group-id="8231140248-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="8231140248-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="8231140248-4">)</span><span class="w">
+</span><span class="mi">21606</span></code></pre>
   </section>
 </div>
 <div class="detail" id="unroutable_recipient/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#unroutable_recipient/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">unroutable_recipient()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L101" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>UNROUTABLE</strong> and cannot receive SMS messages.</p>
+<p>Returns the magic phone number which is <strong>UNROUTABLE</strong> and cannot receive SMS messages.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21612">21612</a> API error from Twilio.</p>
 <h2 id="unroutable_recipient/0-example" class="section-heading">
   <a href="#unroutable_recipient/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.unroutable_recipient())
-iex&gt; Map.get(map, :code)
-21612</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="9453301423-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">valid_sender</span><span class="p" data-group-id="9453301423-2">(</span><span class="p" data-group-id="9453301423-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">unroutable_recipient</span><span class="p" data-group-id="9453301423-3">(</span><span class="p" data-group-id="9453301423-3">)</span><span class="p" data-group-id="9453301423-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="9453301423-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="9453301423-4">)</span><span class="w">
+</span><span class="mi">21612</span></code></pre>
   </section>
 </div>
 <div class="detail" id="valid_sender/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#valid_sender/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">valid_sender()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/messaging.ex#L75" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which can send SMS messages.</p>
+<p>Returns the magic phone number which can send SMS messages.</p>
 <p>Expect no error.</p>
 <h2 id="valid_sender/0-example" class="section-heading">
   <a href="#valid_sender/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = send_message(from: TwilioMagicValues.Messaging.valid_sender(), to: TwilioMagicValues.Messaging.to_other(&quot;+17148673509&quot;))
-iex&gt; Map.get(map, :code, &quot;There is no error code&quot;)
-&quot;There is no error code&quot;
-iex&gt; Map.get(map, :num_segments)
-&quot;1&quot;
-iex&gt; Map.get(map, :num_media)
-&quot;0&quot;</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">send_message</span><span class="p" data-group-id="3120385936-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">valid_sender</span><span class="p" data-group-id="3120385936-2">(</span><span class="p" data-group-id="3120385936-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="o">.</span><span class="n">to_other</span><span class="p" data-group-id="3120385936-3">(</span><span class="s">&quot;+17148673509&quot;</span><span class="p" data-group-id="3120385936-3">)</span><span class="p" data-group-id="3120385936-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="3120385936-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There is no error code&quot;</span><span class="p" data-group-id="3120385936-4">)</span><span class="w">
+</span><span class="s">&quot;There is no error code&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="3120385936-5">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:num_segments</span><span class="p" data-group-id="3120385936-5">)</span><span class="w">
+</span><span class="s">&quot;1&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="3120385936-6">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:num_media</span><span class="p" data-group-id="3120385936-6">)</span><span class="w">
+</span><span class="s">&quot;0&quot;</span></code></pre>
   </section>
 </div>
-
         </section>
-      
 
-      
           <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.1),
           </span>
           <span class="line">
             designed by
-            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
       </footer>
@@ -591,10 +464,7 @@ iex&gt; Map.get(map, :num_media)
   </div>
 </section>
 </div>
-  <script src="dist/app-9bd040e5e5.js"></script>
-  
-  
-  
+  <script src="dist/app-a0c90688fa.js"></script>
   
   </body>
 </html>

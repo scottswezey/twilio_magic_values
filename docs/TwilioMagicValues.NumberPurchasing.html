@@ -1,22 +1,17 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.18.3">
+    <meta name="generator" content="ExDoc v0.19.1">
     <title>TwilioMagicValues.NumberPurchasing – Twilio Magic Values v1.0.0-beta1</title>
-    <link rel="stylesheet" href="dist/app-480ffdc169.css" />
-    
+    <link rel="stylesheet" href="dist/app-240d7fc7e5.css" />
     <script src="dist/sidebar_items-93a7b39cb2.js"></script>
-    
-    
-    
     
   </head>
   <body data-type="modules">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
-
     <div class="main">
 <button class="sidebar-button sidebar-toggle">
   <span class="icon-menu" aria-hidden="true"></span>
@@ -28,17 +23,14 @@
 </button>
 <section class="sidebar">
 
-  
   <a href="https://scottswezey.github.io/twilio_magic_values" class="sidebar-projectLink">
     <div class="sidebar-projectDetails">
       <h1 class="sidebar-projectName">
-        Twilio Magic Values
-      </h1>
+Twilio Magic Values      </h1>
       <h2 class="sidebar-projectVersion">
         v1.0.0-beta1
       </h2>
     </div>
-    
   </a>
 
   <form class="sidebar-search" action="search.html">
@@ -51,13 +43,9 @@
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -70,24 +58,19 @@
 
       <h1>
         <small class="visible-xs">Twilio Magic Values v1.0.0-beta1</small>
-        TwilioMagicValues.NumberPurchasing
-        
+TwilioMagicValues.NumberPurchasing        
           <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/number_purchasing.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
-        
       </h1>
 
-      
+
         <section id="moduledoc">
-          <p>Wrapper for Twilio magic phone numbers used in tests buying phone numbers.</p>
+<p>Wrapper for Twilio magic phone numbers used in tests buying phone numbers.</p>
 <p>See: <a href="https://www.twilio.com/docs/iam/test-credentials#test-incoming-phone-numbers">https://www.twilio.com/docs/iam/test-credentials#test-incoming-phone-numbers</a></p>
-
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
@@ -97,69 +80,51 @@
             Summary
           </h1>
           
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#available_area_code/0">available_area_code()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic area code which has numbers available for purchase</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#empty_area_code/0">empty_area_code()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic area code which has <strong>NO</strong> numbers available for purchase</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#invalid_phone_number/0">invalid_phone_number()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>INVALID</strong> for purchase</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#unavailable_phone_number/0">unavailable_phone_number()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>UNAVAILABLE</strong> for purchase</p>
 </div>
-  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#valid_phone_number/0">valid_phone_number()</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns the magic phone number which is <strong>VALID</strong> for purchase</p>
 </div>
-  
 </div>
-
   </div>
-
-
           
-
         </section>
-      
 
-      
 
-      
+
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
@@ -168,184 +133,146 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="available_area_code/0">
-  
-  
-  <div class="detail-header">
+<div class="detail" id="available_area_code/0">
+    <div class="detail-header">
     <a href="#available_area_code/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">available_area_code()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/number_purchasing.ex#L74" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic area code which has numbers available for purchase.</p>
+<p>Returns the magic area code which has numbers available for purchase.</p>
 <p>Expect no error, and the purchased phone number to be: +15005550006</p>
 <h2 id="available_area_code/0-example" class="section-heading">
   <a href="#available_area_code/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = buy_number(area_code: TwilioMagicValues.NumberPurchasing.available_area_code())
-iex&gt; Map.get(map, :code, &quot;There was no error code&quot;)
-&quot;There was no error code&quot;
-iex&gt; Map.get(map, :friendly_name)
-&quot;(500) 555-0006&quot;</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="3947120221-1">(</span><span class="ss">area_code</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">available_area_code</span><span class="p" data-group-id="3947120221-2">(</span><span class="p" data-group-id="3947120221-2">)</span><span class="p" data-group-id="3947120221-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="3947120221-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There was no error code&quot;</span><span class="p" data-group-id="3947120221-3">)</span><span class="w">
+</span><span class="s">&quot;There was no error code&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="3947120221-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:friendly_name</span><span class="p" data-group-id="3947120221-4">)</span><span class="w">
+</span><span class="s">&quot;(500) 555-0006&quot;</span></code></pre>
   </section>
 </div>
 <div class="detail" id="empty_area_code/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#empty_area_code/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">empty_area_code()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/number_purchasing.ex#L59" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic area code which has <strong>NO</strong> numbers available for purchase.</p>
+<p>Returns the magic area code which has <strong>NO</strong> numbers available for purchase.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21452">21452</a> API error from Twilio.</p>
 <h2 id="empty_area_code/0-example" class="section-heading">
   <a href="#empty_area_code/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = buy_number(area_code: TwilioMagicValues.NumberPurchasing.empty_area_code())
-iex&gt; Map.get(map, :code)
-21452</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="6980976178-1">(</span><span class="ss">area_code</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">empty_area_code</span><span class="p" data-group-id="6980976178-2">(</span><span class="p" data-group-id="6980976178-2">)</span><span class="p" data-group-id="6980976178-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="6980976178-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="6980976178-3">)</span><span class="w">
+</span><span class="mi">21452</span></code></pre>
   </section>
 </div>
 <div class="detail" id="invalid_phone_number/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#invalid_phone_number/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">invalid_phone_number()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/number_purchasing.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>INVALID</strong> for purchase.</p>
+<p>Returns the magic phone number which is <strong>INVALID</strong> for purchase.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21421">21421</a> API error from Twilio.</p>
 <h2 id="invalid_phone_number/0-example" class="section-heading">
   <a href="#invalid_phone_number/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = buy_number(exactly: TwilioMagicValues.NumberPurchasing.invalid_phone_number())
-iex&gt; Map.get(map, :code)
-21421</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="8237120642-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">invalid_phone_number</span><span class="p" data-group-id="8237120642-2">(</span><span class="p" data-group-id="8237120642-2">)</span><span class="p" data-group-id="8237120642-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="8237120642-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="8237120642-3">)</span><span class="w">
+</span><span class="mi">21421</span></code></pre>
   </section>
 </div>
 <div class="detail" id="unavailable_phone_number/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#unavailable_phone_number/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">unavailable_phone_number()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/number_purchasing.ex#L18" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>UNAVAILABLE</strong> for purchase.</p>
+<p>Returns the magic phone number which is <strong>UNAVAILABLE</strong> for purchase.</p>
 <p>Expect the <a href="https://www.twilio.com/docs/errors/21422">21422</a> API error from Twilio.</p>
 <h2 id="unavailable_phone_number/0-example" class="section-heading">
   <a href="#unavailable_phone_number/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = buy_number(exactly: TwilioMagicValues.NumberPurchasing.unavailable_phone_number())
-iex&gt; Map.get(map, :code)
-21422</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="0083331069-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">unavailable_phone_number</span><span class="p" data-group-id="0083331069-2">(</span><span class="p" data-group-id="0083331069-2">)</span><span class="p" data-group-id="0083331069-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="0083331069-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="0083331069-3">)</span><span class="w">
+</span><span class="mi">21422</span></code></pre>
   </section>
 </div>
 <div class="detail" id="valid_phone_number/0">
-  
-  
-  <div class="detail-header">
+    <div class="detail-header">
     <a href="#valid_phone_number/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">valid_phone_number()</span>
-    
       <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/number_purchasing.ex#L46" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
-    
-    
-    
-  </div>
+          </div>
   <section class="docstring">
-    <p>Returns the magic phone number which is <strong>VALID</strong> for purchase.</p>
+<p>Returns the magic phone number which is <strong>VALID</strong> for purchase.</p>
 <p>Expect no error.</p>
 <h2 id="valid_phone_number/0-example" class="section-heading">
   <a href="#valid_phone_number/0-example" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Example
 </h2>
 
-<pre><code class="iex elixir">iex&gt; map = buy_number(exactly: TwilioMagicValues.NumberPurchasing.valid_phone_number())
-iex&gt; Map.get(map, :code, &quot;There was no error code&quot;)
-&quot;There was no error code&quot;
-iex&gt; Map.get(map, :friendly_name)
-&quot;(500) 555-0006&quot;</code></pre>
-
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="7923346305-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">valid_phone_number</span><span class="p" data-group-id="7923346305-2">(</span><span class="p" data-group-id="7923346305-2">)</span><span class="p" data-group-id="7923346305-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="7923346305-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There was no error code&quot;</span><span class="p" data-group-id="7923346305-3">)</span><span class="w">
+</span><span class="s">&quot;There was no error code&quot;</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="7923346305-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:friendly_name</span><span class="p" data-group-id="7923346305-4">)</span><span class="w">
+</span><span class="s">&quot;(500) 555-0006&quot;</span></code></pre>
   </section>
 </div>
-
         </section>
-      
 
-      
           <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.1),
           </span>
           <span class="line">
             designed by
-            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
       </footer>
@@ -353,10 +280,7 @@ iex&gt; Map.get(map, :friendly_name)
   </div>
 </section>
 </div>
-  <script src="dist/app-9bd040e5e5.js"></script>
-  
-  
-  
+  <script src="dist/app-a0c90688fa.js"></script>
   
   </body>
 </html>
