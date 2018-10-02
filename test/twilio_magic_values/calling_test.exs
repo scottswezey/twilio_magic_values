@@ -11,7 +11,7 @@ defmodule TwilioMagicValues.CallingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21212
+    assert results.code == 21_212
   end
 
   test "valid_caller_id" do
@@ -33,7 +33,7 @@ defmodule TwilioMagicValues.CallingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21217
+    assert results.code == 21_217
   end
 
   test "unroutable_recipient" do
@@ -44,7 +44,7 @@ defmodule TwilioMagicValues.CallingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21214
+    assert results.code == 21_214
   end
 
   test "geo_blocked_recipient" do
@@ -55,7 +55,7 @@ defmodule TwilioMagicValues.CallingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21215
+    assert results.code == 21_215
   end
 
   test "blacklisted_recipient" do
@@ -66,11 +66,14 @@ defmodule TwilioMagicValues.CallingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21216
+    assert results.code == 21_216
   end
 
   defp make_call(from: f, to: t) do
-    get_http_response([{"To", t}, {"From", f}, {"Url", "http://demo.twilio.com/docs/voice.xml"}])
+    resp =
+      get_http_response([{"To", t}, {"From", f}, {"Url", "http://demo.twilio.com/docs/voice.xml"}])
+
+    resp
     |> Map.get(:body)
     |> Poison.Parser.parse!(keys: :atoms)
   end
