@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.19.1">
-    <title>Readme – Twilio Magic Values v1.0.0-beta1</title>
+    <title>Readme – Twilio Magic Values v1.0.0-beta2</title>
     <link rel="stylesheet" href="dist/app-240d7fc7e5.css" />
     <script src="dist/sidebar_items-93a7b39cb2.js"></script>
     
@@ -28,7 +28,7 @@
       <h1 class="sidebar-projectName">
 Twilio Magic Values      </h1>
       <h2 class="sidebar-projectVersion">
-        v1.0.0-beta1
+        v1.0.0-beta2
       </h2>
     </div>
   </a>
@@ -67,11 +67,11 @@ Twilio Magic Values      </h1>
 <li>Require <code class="inline">twilio_magic_values</code> in your <code class="inline">mix.exs</code> deps. Since this project isn’t currently published to <a href="https://hex.pm/docs/publish">Hex</a>, you will need to use git as shown here:
 </li>
 </ul>
-<pre><code class="nohighlight makeup elixir"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="1620496156-1">do</span><span class="w">
-  </span><span class="p" data-group-id="1620496156-2">[</span><span class="w">
-    </span><span class="p" data-group-id="1620496156-3">{</span><span class="ss">:twilio_magic_values</span><span class="p">,</span><span class="w"> </span><span class="ss">git</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;git://github.com/scottswezey/twilio_magic_values.git&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">only</span><span class="p">:</span><span class="w"> </span><span class="ss">:test</span><span class="p" data-group-id="1620496156-3">}</span><span class="w">
-  </span><span class="p" data-group-id="1620496156-2">]</span><span class="w">
-</span><span class="k" data-group-id="1620496156-1">end</span></code></pre>
+<pre><code class="nohighlight makeup elixir"><span class="kd">def</span><span class="w"> </span><span class="nf">deps</span><span class="w"> </span><span class="k" data-group-id="0943686214-1">do</span><span class="w">
+  </span><span class="p" data-group-id="0943686214-2">[</span><span class="w">
+    </span><span class="p" data-group-id="0943686214-3">{</span><span class="ss">:twilio_magic_values</span><span class="p">,</span><span class="w"> </span><span class="ss">git</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;git://github.com/scottswezey/twilio_magic_values.git&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">only</span><span class="p">:</span><span class="w"> </span><span class="ss">:test</span><span class="p" data-group-id="0943686214-3">}</span><span class="w">
+  </span><span class="p" data-group-id="0943686214-2">]</span><span class="w">
+</span><span class="k" data-group-id="0943686214-1">end</span></code></pre>
 <ul>
 <li>This project is only needed for the <code class="inline">test</code> environment.
 </li>
@@ -109,17 +109,17 @@ Twilio Magic Values      </h1>
 
 <pre><code class="nohighlight makeup elixir"><span class="kn">alias</span><span class="w"> </span><span class="nc">TwilioMagicValues.Calling</span><span class="w">
 
-</span><span class="n">make_test_call</span><span class="p" data-group-id="4307432355-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">Calling</span><span class="o">.</span><span class="n">valid_caller_id</span><span class="p" data-group-id="4307432355-2">(</span><span class="p" data-group-id="4307432355-2">)</span><span class="p">,</span><span class="w">
-               </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">Calling</span><span class="o">.</span><span class="n">invalid_recipient</span><span class="p" data-group-id="4307432355-3">(</span><span class="p" data-group-id="4307432355-3">)</span><span class="p">,</span><span class="w">
-               </span><span class="n">...</span><span class="p" data-group-id="4307432355-1">)</span></code></pre>
+</span><span class="n">make_test_call</span><span class="p" data-group-id="5708101431-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">Calling</span><span class="o">.</span><span class="n">valid_caller_id</span><span class="p" data-group-id="5708101431-2">(</span><span class="p" data-group-id="5708101431-2">)</span><span class="p">,</span><span class="w">
+               </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">Calling</span><span class="o">.</span><span class="n">invalid_recipient</span><span class="p" data-group-id="5708101431-3">(</span><span class="p" data-group-id="5708101431-3">)</span><span class="p">,</span><span class="w">
+               </span><span class="n">...</span><span class="p" data-group-id="5708101431-1">)</span></code></pre>
 <pre><code class="nohighlight makeup elixir"><span class="kn">alias</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="w">
 
-</span><span class="n">buy_test_number</span><span class="p" data-group-id="2515544579-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">NumberPurchasing</span><span class="o">.</span><span class="n">valid_phone_number</span><span class="p" data-group-id="2515544579-2">(</span><span class="p" data-group-id="2515544579-2">)</span><span class="p" data-group-id="2515544579-1">)</span></code></pre>
+</span><span class="n">buy_test_number</span><span class="p" data-group-id="0712516470-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">NumberPurchasing</span><span class="o">.</span><span class="n">valid_phone_number</span><span class="p" data-group-id="0712516470-2">(</span><span class="p" data-group-id="0712516470-2">)</span><span class="p" data-group-id="0712516470-1">)</span></code></pre>
 <pre><code class="nohighlight makeup elixir"><span class="kn">alias</span><span class="w"> </span><span class="nc">TwilioMagicValues.Messaging</span><span class="w">
 
-</span><span class="n">send_test_message</span><span class="p" data-group-id="4402584297-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">Messaging</span><span class="o">.</span><span class="n">valid_sender</span><span class="p" data-group-id="4402584297-2">(</span><span class="p" data-group-id="4402584297-2">)</span><span class="p">,</span><span class="w">
-                  </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">Messaging</span><span class="o">.</span><span class="n">cant_receive_sms</span><span class="p" data-group-id="4402584297-3">(</span><span class="p" data-group-id="4402584297-3">)</span><span class="p">,</span><span class="w">
-                  </span><span class="n">...</span><span class="p" data-group-id="4402584297-1">)</span></code></pre>
+</span><span class="n">send_test_message</span><span class="p" data-group-id="6922122305-1">(</span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">Messaging</span><span class="o">.</span><span class="n">valid_sender</span><span class="p" data-group-id="6922122305-2">(</span><span class="p" data-group-id="6922122305-2">)</span><span class="p">,</span><span class="w">
+                  </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">Messaging</span><span class="o">.</span><span class="n">cant_receive_sms</span><span class="p" data-group-id="6922122305-3">(</span><span class="p" data-group-id="6922122305-3">)</span><span class="p">,</span><span class="w">
+                  </span><span class="n">...</span><span class="p" data-group-id="6922122305-1">)</span></code></pre>
 <h2 id="resources" class="section-heading">
   <a href="#resources" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Resources

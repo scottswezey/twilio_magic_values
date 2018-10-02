@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.19.1">
-    <title>TwilioMagicValues.NumberPurchasing – Twilio Magic Values v1.0.0-beta1</title>
+    <title>TwilioMagicValues.NumberPurchasing – Twilio Magic Values v1.0.0-beta2</title>
     <link rel="stylesheet" href="dist/app-240d7fc7e5.css" />
     <script src="dist/sidebar_items-93a7b39cb2.js"></script>
     
@@ -28,7 +28,7 @@
       <h1 class="sidebar-projectName">
 Twilio Magic Values      </h1>
       <h2 class="sidebar-projectVersion">
-        v1.0.0-beta1
+        v1.0.0-beta2
       </h2>
     </div>
   </a>
@@ -57,7 +57,7 @@ Twilio Magic Values      </h1>
 
 
       <h1>
-        <small class="visible-xs">Twilio Magic Values v1.0.0-beta1</small>
+        <small class="visible-xs">Twilio Magic Values v1.0.0-beta2</small>
 TwilioMagicValues.NumberPurchasing        
           <a href="https://github.com/scottswezey/twilio_magic_values/blob/master/lib/twilio_magic_values/number_purchasing.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
@@ -153,10 +153,10 @@ TwilioMagicValues.NumberPurchasing
   Example
 </h2>
 
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="3947120221-1">(</span><span class="ss">area_code</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">available_area_code</span><span class="p" data-group-id="3947120221-2">(</span><span class="p" data-group-id="3947120221-2">)</span><span class="p" data-group-id="3947120221-1">)</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="3947120221-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There was no error code&quot;</span><span class="p" data-group-id="3947120221-3">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="0488704476-1">(</span><span class="ss">area_code</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">available_area_code</span><span class="p" data-group-id="0488704476-2">(</span><span class="p" data-group-id="0488704476-2">)</span><span class="p" data-group-id="0488704476-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="0488704476-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There was no error code&quot;</span><span class="p" data-group-id="0488704476-3">)</span><span class="w">
 </span><span class="s">&quot;There was no error code&quot;</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="3947120221-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:friendly_name</span><span class="p" data-group-id="3947120221-4">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="0488704476-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:friendly_name</span><span class="p" data-group-id="0488704476-4">)</span><span class="w">
 </span><span class="s">&quot;(500) 555-0006&quot;</span></code></pre>
   </section>
 </div>
@@ -180,8 +180,8 @@ TwilioMagicValues.NumberPurchasing
   Example
 </h2>
 
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="6980976178-1">(</span><span class="ss">area_code</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">empty_area_code</span><span class="p" data-group-id="6980976178-2">(</span><span class="p" data-group-id="6980976178-2">)</span><span class="p" data-group-id="6980976178-1">)</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="6980976178-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="6980976178-3">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="0676156012-1">(</span><span class="ss">area_code</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">empty_area_code</span><span class="p" data-group-id="0676156012-2">(</span><span class="p" data-group-id="0676156012-2">)</span><span class="p" data-group-id="0676156012-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="0676156012-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="0676156012-3">)</span><span class="w">
 </span><span class="mi">21452</span></code></pre>
   </section>
 </div>
@@ -205,8 +205,8 @@ TwilioMagicValues.NumberPurchasing
   Example
 </h2>
 
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="8237120642-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">invalid_phone_number</span><span class="p" data-group-id="8237120642-2">(</span><span class="p" data-group-id="8237120642-2">)</span><span class="p" data-group-id="8237120642-1">)</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="8237120642-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="8237120642-3">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="6142130143-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">invalid_phone_number</span><span class="p" data-group-id="6142130143-2">(</span><span class="p" data-group-id="6142130143-2">)</span><span class="p" data-group-id="6142130143-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="6142130143-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="6142130143-3">)</span><span class="w">
 </span><span class="mi">21421</span></code></pre>
   </section>
 </div>
@@ -230,8 +230,8 @@ TwilioMagicValues.NumberPurchasing
   Example
 </h2>
 
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="0083331069-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">unavailable_phone_number</span><span class="p" data-group-id="0083331069-2">(</span><span class="p" data-group-id="0083331069-2">)</span><span class="p" data-group-id="0083331069-1">)</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="0083331069-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="0083331069-3">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="6417279874-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">unavailable_phone_number</span><span class="p" data-group-id="6417279874-2">(</span><span class="p" data-group-id="6417279874-2">)</span><span class="p" data-group-id="6417279874-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="6417279874-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p" data-group-id="6417279874-3">)</span><span class="w">
 </span><span class="mi">21422</span></code></pre>
   </section>
 </div>
@@ -255,10 +255,10 @@ TwilioMagicValues.NumberPurchasing
   Example
 </h2>
 
-<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="7923346305-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">valid_phone_number</span><span class="p" data-group-id="7923346305-2">(</span><span class="p" data-group-id="7923346305-2">)</span><span class="p" data-group-id="7923346305-1">)</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="7923346305-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There was no error code&quot;</span><span class="p" data-group-id="7923346305-3">)</span><span class="w">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buy_number</span><span class="p" data-group-id="5173011797-1">(</span><span class="ss">exactly</span><span class="p">:</span><span class="w"> </span><span class="nc">TwilioMagicValues.NumberPurchasing</span><span class="o">.</span><span class="n">valid_phone_number</span><span class="p" data-group-id="5173011797-2">(</span><span class="p" data-group-id="5173011797-2">)</span><span class="p" data-group-id="5173011797-1">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="5173011797-3">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:code</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There was no error code&quot;</span><span class="p" data-group-id="5173011797-3">)</span><span class="w">
 </span><span class="s">&quot;There was no error code&quot;</span><span class="w">
-</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="7923346305-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:friendly_name</span><span class="p" data-group-id="7923346305-4">)</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Map</span><span class="o">.</span><span class="n">get</span><span class="p" data-group-id="5173011797-4">(</span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="ss">:friendly_name</span><span class="p" data-group-id="5173011797-4">)</span><span class="w">
 </span><span class="s">&quot;(500) 555-0006&quot;</span></code></pre>
   </section>
 </div>
