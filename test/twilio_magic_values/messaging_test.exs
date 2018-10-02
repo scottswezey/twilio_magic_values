@@ -11,7 +11,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21212
+    assert results.code == 21_212
   end
 
   test "from unowned_number" do
@@ -22,7 +22,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21606
+    assert results.code == 21_606
   end
 
   test "sender_cant_send_sms" do
@@ -33,7 +33,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21606
+    assert results.code == 21_606
   end
 
   test "sender_queue_full" do
@@ -44,7 +44,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 429
-    assert results.code == 21611
+    assert results.code == 21_611
   end
 
   test "valid_sender" do
@@ -66,7 +66,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21211
+    assert results.code == 21_211
   end
 
   test "unroutable_recipient" do
@@ -77,7 +77,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21612
+    assert results.code == 21_612
   end
 
   test "geo_blocked_recipient" do
@@ -88,7 +88,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21408
+    assert results.code == 21_408
   end
 
   test "blacklisted_recipient" do
@@ -99,7 +99,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21610
+    assert results.code == 21_610
   end
 
   test "cant_receive_sms" do
@@ -110,7 +110,7 @@ defmodule TwilioMagicValues.MessagingTest do
       )
 
     assert results.status == 400
-    assert results.code == 21614
+    assert results.code == 21_614
   end
 
   defp send_message(from: f, to: t) do
@@ -122,7 +122,9 @@ defmodule TwilioMagicValues.MessagingTest do
     #
     # Poison.Parser.parse!(resp.body, keys: :atoms)
 
-    get_http_response([{"To", t}, {"From", f}, {"Body", "Hello%20world"}])
+    resp = get_http_response([{"To", t}, {"From", f}, {"Body", "Hello%20world"}])
+
+    resp
     |> Map.get(:body)
     |> Poison.Parser.parse!(keys: :atoms)
   end

@@ -6,14 +6,14 @@ defmodule TwilioMagicValues.NumberPurchasingTest do
   test "unavailable_phone_number" do
     results = buy_number(exactly: Magic.unavailable_phone_number())
 
-    assert results.code == 21422
+    assert results.code == 21_422
     assert results.status == 400
   end
 
   test "invalid_phone_number" do
     results = buy_number(exactly: Magic.invalid_phone_number())
 
-    assert results.code == 21421
+    assert results.code == 21_421
     assert results.status == 400
   end
 
@@ -27,7 +27,7 @@ defmodule TwilioMagicValues.NumberPurchasingTest do
   test "empty_area_code" do
     results = buy_number(area_code: Magic.empty_area_code())
 
-    assert results.code == 21452
+    assert results.code == 21_452
     assert results.status == 400
   end
 
@@ -39,13 +39,17 @@ defmodule TwilioMagicValues.NumberPurchasingTest do
   end
 
   defp buy_number(exactly: num) do
-    get_http_response([{"PhoneNumber", num}])
+    resp = get_http_response([{"PhoneNumber", num}])
+
+    resp
     |> Map.get(:body)
     |> Poison.Parser.parse!(keys: :atoms)
   end
 
   defp buy_number(area_code: num) do
-    get_http_response([{"AreaCode", num}])
+    resp = get_http_response([{"AreaCode", num}])
+
+    resp
     |> Map.get(:body)
     |> Poison.Parser.parse!(keys: :atoms)
   end
