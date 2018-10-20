@@ -4,7 +4,7 @@ defmodule TwilioMagicValues.MixProject do
   def project do
     [
       app: :twilio_magic_values,
-      version: "1.0.0-beta2",
+      version: "1.0.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -27,8 +27,8 @@ defmodule TwilioMagicValues.MixProject do
       homepage_url: "https://scottswezey.github.io/twilio_magic_values",
       docs: [
         main: "readme",
-        extras: ["README.md": [title: "Readme"], "CONTRIBUTING.md": [title: "Contributing"]],
-        output: "docs"
+        extras: ["README.md": [title: "Readme"], "CONTRIBUTING.md": [title: "Contributing"]]
+        # output: "docs"
       ]
     ]
   end
@@ -40,8 +40,8 @@ defmodule TwilioMagicValues.MixProject do
       maintainers: ["Scott Swezey"],
       licenses: ["GPL-3.0"],
       links: %{
-        "GitHub" => "https://github.com/scottswezey/twilio_magic_values",
-        "Docs" => "https://scottswezey.github.io/twilio_magic_values"
+        "GitHub" => "https://github.com/scottswezey/twilio_magic_values"
+        # "Docs" => "https://scottswezey.github.io/twilio_magic_values"
       }
     ]
   end
