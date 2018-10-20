@@ -54,7 +54,7 @@ send_test_message(from: Messaging.valid_sender(),
 
 ## Resources
 
-- Docs are available at: [https://scottswezey.github.io/twilio_magic_values](https://scottswezey.github.io/twilio_magic_values). The Docs will be moved to Hexdocs when the project is posted on Hex.
+- Docs are available at: [https://hexdocs.pm/twilio_magic_values](https://hexdocs.pm/twilio_magic_values). The Docs will be moved to Hexdocs when the project is posted on Hex.
 - The Twilio docs for test credentials and magic phone numbers: [https://www.twilio.com/docs/iam/test-credentials](https://www.twilio.com/docs/iam/test-credentials)
 - A Twilio authored blog post concerning test credentials and magic phone numbers: [https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html](https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html)
 
