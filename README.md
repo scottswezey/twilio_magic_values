@@ -22,7 +22,7 @@ end
 - You do **NOT** need to include this in mix.exs `applications` or `extra_applications`.
 - Use the provided functions to replace hard coded magic phone numbers in your test code.
 
-### Examples:
+### Examples
 
 - Instead of testing sending a message to `+15005550004`, use: `TwilioMagicValues.Messaging.blacklisted_recipient/1`.
 - Instead of testing a call from `+15005550001`, use: `TwilioMagicValues.Calling.invalid_caller_id/1`.
@@ -77,7 +77,7 @@ This project will be versioned using the [SEMVER 2.0.0 rules](https://semver.org
 
 - Issues and pull requests are welcome on [GitHub](https://github.com/scottswezey/twilio_magic_values).
 - Twilio doesn't currently provide magic numbers for other parts of their APIs. If there is something they add new, or a magic number they offer which is otherwise missing from this project, please open an issue or pull request.
-- See `CONTRIBUTING.md`
+- See [`CONTRIBUTING.md`](https://github.com/scottswezey/twilio_magic_values/blob/master/CONTRIBUTING.md)
 
 ## License
 
