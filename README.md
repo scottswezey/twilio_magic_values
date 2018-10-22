@@ -52,6 +52,14 @@ send_test_message(from: Messaging.valid_sender(),
                   ...)
 ```
 
+## Versioning
+
+This project will be versioned using the [SEMVER 2.0.0 rules](https://semver.org).
+
+- Major versions (ex: 1.x.x) will be introduced in the event of breaking changes where clients using this project will need to update their code.
+- Minor versions (ex: x.1.x) will be introduced for new features, such as new magic numbers provided by Twilio.
+- Patch versions (ex: x.x.1) will be introduced for fixes, documentation and instruction updates, and similar minor, non-breaking changes.
+
 ## Resources
 
 - Docs are available at: [https://hexdocs.pm/twilio_magic_values](https://hexdocs.pm/twilio_magic_values).
