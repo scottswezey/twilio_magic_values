@@ -4,7 +4,7 @@ defmodule TwilioMagicValues.MixProject do
   def project do
     [
       app: :twilio_magic_values,
-      version: "1.0.0",
+      version: "1.0.1",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -24,7 +24,6 @@ defmodule TwilioMagicValues.MixProject do
         "Provide elixir apps with simple, pragmatic access to magic testing values for the Twilio API.",
       package: package(),
       source_url: "https://github.com/scottswezey/twilio_magic_values",
-      # homepage_url: "https://github.com/scottswezey/twilio_magic_values",
       docs: [
         main: "readme",
         extras: ["README.md": [title: "Readme"], "CONTRIBUTING.md": [title: "Contributing"]]
@@ -58,7 +57,7 @@ defmodule TwilioMagicValues.MixProject do
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:httpoison, "~> 1.0", only: :test},
       {:poison, "~> 4.0.0", only: [:dev, :test]},
-      {:credo, "~> 0.10.2", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.8", only: :test}
     ]
   end
