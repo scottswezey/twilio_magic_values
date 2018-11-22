@@ -27,7 +27,6 @@ defmodule TwilioMagicValues.MixProject do
       docs: [
         main: "readme",
         extras: ["README.md": [title: "Readme"], "CONTRIBUTING.md": [title: "Contributing"]]
-        # output: "docs"
       ]
     ]
   end
@@ -39,7 +38,9 @@ defmodule TwilioMagicValues.MixProject do
       maintainers: ["Scott Swezey"],
       licenses: ["GPL-3.0"],
       links: %{
-        "GitHub" => "https://github.com/scottswezey/twilio_magic_values"
+        "GitHub" => "https://github.com/scottswezey/twilio_magic_values",
+        "Changelog" =>
+          "https://github.com/scottswezey/twilio_magic_values/blob/master/CHANGELOG.md"
       }
     ]
   end
