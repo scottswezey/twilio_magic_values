@@ -67,8 +67,8 @@ send_test_message(from: Messaging.valid_sender(),
 
 ## Project freshness
 
-- **Latest development:** Oct 21, 2018
-- **Tests passed:** Oct 21, 2018
+- **Latest development:** Nov 21, 2018
+- **Tests passed:** Nov 21, 2018
 
 ## Versioning
 
