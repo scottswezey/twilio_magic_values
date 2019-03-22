@@ -14,6 +14,6 @@
 
 > Remember that most of the tests hit Twilio's API. Avoid running the tests too frequently.
 
-2. Please run `mix credo` and fix any issues before committing.
+1. Please run `mix credo` and fix any issues before committing.
 1. Please run `mix format` before committing.
 1. Do not bump the version number in your pull requests.
