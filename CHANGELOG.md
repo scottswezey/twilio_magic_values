@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.0.2
+
+- Bump depdencies
+- No breaking changes
+- No new functionality
+- All tests still pass
+
 ## Version 1.0.1
 
 - Bump depdencies
