@@ -62,18 +62,12 @@ send_test_message(from: Messaging.valid_sender(),
 
 ---
 
-## Project freshness
+## Project freshness: v1.0.3
 
 - **Latest development:** April 2, 2019
 - **Tests passed:** April 2, 2019
 
-## Versioning
-
 This project is versioned using the [SEMVER 2.0.0 rules](https://semver.org).
-
-- **Major** versions (ex: 1.y.z) will be introduced in the event of breaking changes where clients using this project will need to update their code.
-- **Minor** versions (ex: x.1.z) will be introduced for new features, such as new magic numbers provided by Twilio.
-- **Patch** versions (ex: x.y.1) will be introduced for fixes, documentation and instruction updates, and similar minor, non-breaking changes.
 
 ## Resources
 
@@ -98,6 +92,6 @@ This project is versioned using the [SEMVER 2.0.0 rules](https://semver.org).
 
 GPL v3; See `LICENSE` file.
 
-## Author and Major Contributors
+## Author
 
 Written by [Scott Swezey](https://github.com/scottswezey).
