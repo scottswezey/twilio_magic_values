@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.0.3
+
+- Updating deps
+- ex_doc 0.20.0!
+
 ## Version 1.0.2
 
 - Bump depdencies
