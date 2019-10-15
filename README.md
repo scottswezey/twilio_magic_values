@@ -64,8 +64,8 @@ send_test_message(from: Messaging.valid_sender(),
 
 ## Project freshness: v1.0.3
 
-- **Latest development:** April 2, 2019
-- **Tests passed:** April 2, 2019
+- **Latest development:** November 14, 2019
+- **Tests passed:** November 14, 2019
 
 This project is versioned using the [SEMVER 2.0.0 rules](https://semver.org).
 

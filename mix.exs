@@ -4,7 +4,7 @@ defmodule TwilioMagicValues.MixProject do
   def project do
     [
       app: :twilio_magic_values,
-      version: "1.0.3",
+      version: "1.0.4",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -60,7 +60,7 @@ defmodule TwilioMagicValues.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
-      {:httpoison, "~> 1.0", only: :test},
+      {:httpoison, "~> 1.6", only: :test},
       {:poison, "~> 4.0.0", only: [:dev, :test]},
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.8", only: :test}
