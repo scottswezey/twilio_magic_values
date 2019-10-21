@@ -5,7 +5,7 @@ defmodule TwilioMagicValues.MixProject do
     [
       app: :twilio_magic_values,
       version: "1.0.5",
-      elixir: "~> 1.6",
+      elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
@@ -59,7 +59,7 @@ defmodule TwilioMagicValues.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.21", only: :dev, runtime: false},
       {:httpoison, "~> 1.6", only: :test},
       {:poison, "~> 4.0.0", only: [:dev, :test]},
       {:credo, "~> 1.0", only: [:dev, :test], runtime: false},
