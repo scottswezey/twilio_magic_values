@@ -62,7 +62,7 @@ send_test_message(from: Messaging.valid_sender(),
 
 ---
 
-## Project freshness: v1.0.3
+## Project freshness: v1.0.4
 
 - **Latest development:** October 2, 2020
 - **Tests passed:** October 2, 2020
