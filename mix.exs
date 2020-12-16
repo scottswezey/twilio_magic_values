@@ -35,7 +35,7 @@ defmodule TwilioMagicValues.MixProject do
     ]
   end
 
-  defp package() do
+  defp package do
     [
       name: "twilio_magic_values",
       files: ["lib", "mix.exs", "*.md", "LICENSE", ".formatter.exs"],
