@@ -1,6 +1,6 @@
 # Twilio Magic Values
 
-Provides elixir apps with simple, pragmatic access to [magic testing values](https://www.twilio.com/docs/iam/test-credentials) for the [Twilio](https://www.twilio.com) API. The module and function names help give you code that is easier to read and is less prone to typos. Automated tests in this project also ensure that you will know if the magic numbers ever change.
+Provides Elixir apps with simple, pragmatic access to [magic testing values](https://www.twilio.com/docs/iam/test-credentials) for the [Twilio](https://www.twilio.com) API. The module and function names help give you code that is easier to read and is less prone to typos. Automated tests in this project also ensure that you will know if the magic numbers ever change.
 
 ## Installation
 
@@ -64,8 +64,8 @@ send_test_message(from: Messaging.valid_sender(),
 
 ## Project freshness: v1.0.4
 
-- **Latest development:** October 2, 2020
-- **Tests passed:** October 2, 2020
+- **Latest development:** December 16, 2020
+- **Tests passed:** December 16, 2020
 
 This project is versioned using the [SEMVER 2.0.0 rules](https://semver.org).
 

@@ -12,7 +12,7 @@
 
 > You will need to copy `config/test.secret.exs.sample` to `config/test.secret.exs` and update it with your own [testing credentials](https://www.twilio.com/console/account/settings) from Twilio.
 
-> Remember that most of the tests hit Twilio's API. Avoid running the tests too frequently.
+> Remember that most of the tests hit Twilio's test API. Avoid running the tests too frequently.
 
 1. Please run `mix credo` and fix any issues before committing.
 1. Please run `mix format` before committing.
