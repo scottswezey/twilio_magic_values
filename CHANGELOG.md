@@ -1,9 +1,15 @@
 # Changelog
 
-## Version 1.0.4 (Pending release)
+## Version 1.0.6
+
+- Update non-production deps.
+- Verify all tests pass and note project is still feature complete.
+
+## Version 1.0.5
 
 - Update dep httpoison to 1.7.0 to fix SSL/TLS issue with Hackney.
 - Bump all non-production deps.
+- Skipped version 1.0.4
 
 ## Version 1.0.3
 

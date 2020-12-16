@@ -4,7 +4,7 @@ defmodule TwilioMagicValues.MixProject do
   def project do
     [
       app: :twilio_magic_values,
-      version: "1.0.5",
+      version: "1.0.6",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
