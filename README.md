@@ -62,10 +62,10 @@ send_test_message(from: Messaging.valid_sender(),
 
 ---
 
-## Project freshness: v1.0.6
+## Project freshness: v1.0.7
 
-- **Latest development:** December 16, 2020
-- **Tests passed:** December 16, 2020
+- **Latest development:** December 19, 2020
+- **Tests passed:** December 19, 2020
 
 This project is versioned using the [SEMVER 2.0.0 rules](https://semver.org).
 

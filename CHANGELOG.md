@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 1.0.7
+
+- Bump hackney version to fix TLS issue with OTP 23.
+- All tests passing again.
+
 ## Version 1.0.6
 
 - Update non-production deps.
