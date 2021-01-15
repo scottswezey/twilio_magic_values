@@ -24,7 +24,7 @@ See the docs for all available modules and methods for all known magic numbers.
 
 ### Instead of testing a call from `+15005550001`
 
-Use: `TwilioMagicValues.Calling.invalid_caller_id/1`
+Use: `TwilioMagicValues.Calling.invalid_caller_id/0`
 
 ```elixir
 alias TwilioMagicValues.Calling
@@ -38,7 +38,7 @@ make_test_call(from: Calling.invalid_caller_id(),
 
 ### Instead of testing a purchase for `+15005550000`
 
-Use: `TwilioMagicValues.NumberPurchasing.unavailable_phone_number/1`
+Use: `TwilioMagicValues.NumberPurchasing.unavailable_phone_number/0`
 
 ```elixir
 alias TwilioMagicValues.NumberPurchasing
@@ -50,7 +50,7 @@ buy_test_number(exactly: NumberPurchasing.unavailable_phone_number())
 
 ### Instead of testing sending a message to `+15005550004`
 
-Use: `TwilioMagicValues.Messaging.blacklisted_recipient/1`
+Use: `TwilioMagicValues.Messaging.blacklisted_recipient/0`
 
 ```elixir
 alias TwilioMagicValues.Messaging
