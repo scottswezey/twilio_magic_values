@@ -74,6 +74,7 @@ This project is versioned using the [SEMVER 2.0.0 rules](https://semver.org).
 - [Project documentation](https://hexdocs.pm/twilio_magic_values).
 - The Twilio docs for [test credentials and magic phone numbers](https://www.twilio.com/docs/iam/test-credentials).
 - A related [blog post](https://www.twilio.com/blog/2018/04/twilio-test-credentials-magic-numbers.html) by Twilio concerning test credentials and magic phone numbers.
+- I wrote about [mocking Twilio's webhooks](https://scottswezey.com/2020/12/20/mock-incoming-sms-messages-twilio/) in Paw.
 
 ### Other useful Twilio projects written in Elixir
 
